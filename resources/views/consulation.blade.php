@@ -31,19 +31,19 @@
                         <div class="col-lg-12">
                             <div class="form-group"> <input type="text" id="name" name="name" class="form-control"
                                     placeholder="Your Name"></div>
-                            <div class="form-group"> <input type="text" id="subject" name="subject" class="form-control"
+                            <div class="form-group mt-3"> <input type="text" id="subject" name="subject" class="form-control"
                                     placeholder="Your Subject"></div>
-                            <div class="form-group"> <input type="email" id="email" name="email" class="form-control"
+                            <div class="form-group mt-3"> <input type="email" id="email" name="email" class="form-control"
                                     placeholder="Your Email"></div>
-                            <div class="form-group file"> <label for="file">File</label> <input type="file" id="file"
+                            <div class="form-group mt-3 file"> <label for="file">File</label> <input type="file" id="file"
                                     name="file" class="form-control"> <span class="help-info">Accept File Type:
                                     jpg,jpeg,png</span></div>
-                            <div class="form-group textarea"><textarea name="message" id="message" cols="30" rows="10"
+                            <div class="form-group mt-3 textarea"><textarea name="message" id="message" cols="30" rows="10"
                                     class="form-control" placeholder="Your Message"></textarea></div>
                         </div>
                         <div class="col-lg-12 mb-5 pb-5">
                             <div class="btn-wrapper text-center">
-                                <button class="submit-btn" type="submit">Make Consulation</button>
+                                <button class="submit-btn mt-3" type="submit">Make Consulation</button>
                             </div>
                         </div>
                     </div>

@@ -10,7 +10,7 @@
                         <h2 class="page-title"> Practice Area
                         </h2>
                         <ul class="page-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href="#"> Practice Area
                             </a></li>
                         </ul>
@@ -28,17 +28,14 @@
                         <div class="thumb">
                             <img src="assets/uploads/media-uploader/new-pa-61622623782.png"
                                 alt />
-                            <div class="cats"><a
-                                    href="practce-area/category/1/real-state">Real
-                                    State</a></div>
                         </div>
                         <div class="content">
                             <h4 class="title"><a
-                                    href="practce-area/business-law/22">Business
+                                    href="/business-law">Business
                                     Law</a></h4>
                             <p>If you are accused of committing a crime, you will need the very best criminal defense
                                 attorneys in Fresno. We...</p>
-                            <a href="practce-area/business-law/22"
+                            <a href="/business-law"
                                 class="readmore">Read More</a>
                         </div>
                     </div>
@@ -48,17 +45,14 @@
                         <div class="thumb">
                             <img src="assets/uploads/media-uploader/new-pa-51622623782.png"
                                 alt />
-                            <div class="cats"><a
-                                    href="practce-area/category/2/business">Business</a>
-                            </div>
                         </div>
                         <div class="content">
                             <h4 class="title"><a
-                                    href="practce-area/family-law/23">Family Law</a>
+                                    href="/family-law">Family Law</a>
                             </h4>
                             <p>If you are accused of committing a crime, you will need the very best criminal defense
                                 attorneys in Fresno. We...</p>
-                            <a href="practce-area/family-law/23"
+                            <a href="/family-law"
                                 class="readmore">Read More</a>
                         </div>
                     </div>
@@ -68,17 +62,14 @@
                         <div class="thumb">
                             <img src="assets/uploads/media-uploader/new-pa-41622623781.png"
                                 alt />
-                            <div class="cats"><a
-                                    href="practce-area/category/3/personal">Personal</a>
-                            </div>
                         </div>
                         <div class="content">
                             <h4 class="title"><a
-                                    href="practce-area/criminal-law/24">Criminal
+                                    href="/criminal-law">Criminal
                                     Law</a></h4>
                             <p>If you are accused of committing a crime, you will need the very best criminal defense
                                 attorneys in Fresno. We...</p>
-                            <a href="practce-area/criminal-law/24"
+                            <a href="/criminal-law"
                                 class="readmore">Read More</a>
                         </div>
                     </div>
@@ -88,17 +79,14 @@
                         <div class="thumb">
                             <img src="assets/uploads/media-uploader/new-pa-31622623781.png"
                                 alt />
-                            <div class="cats"><a
-                                    href="practce-area/category/4/criminal">Criminal</a>
-                            </div>
                         </div>
                         <div class="content">
                             <h4 class="title"><a
-                                    href="practce-area/real-estate-law/25">Real
+                                    href="/real-estate-law">Real
                                     Estate Law</a></h4>
                             <p>If you are accused of committing a crime, you will need the very best criminal defense
                                 attorneys in Fresno. We...</p>
-                            <a href="practce-area/real-estate-law/25"
+                            <a href="/real-estate-law"
                                 class="readmore">Read More</a>
                         </div>
                     </div>
@@ -108,17 +96,14 @@
                         <div class="thumb">
                             <img src="assets/uploads/media-uploader/new-pa-21622623780.png"
                                 alt />
-                            <div class="cats"><a
-                                    href="practce-area/category/1/real-state">Real
-                                    State</a></div>
                         </div>
                         <div class="content">
                             <h4 class="title"><a
-                                    href="practce-area/personal-injury/26">Personal
+                                    href="/personal-injury">Personal
                                     Injury</a></h4>
                             <p>If you are accused of committing a crime, you will need the very best criminal defense
                                 attorneys in Fresno. We...</p>
-                            <a href="practce-area/personal-injury/26"
+                            <a href="/personal-injury"
                                 class="readmore">Read More</a>
                         </div>
                     </div>
@@ -128,17 +113,14 @@
                         <div class="thumb">
                             <img src="assets/uploads/media-uploader/new-pa-11622623780.png"
                                 alt />
-                            <div class="cats"><a
-                                    href="practce-area/category/2/business">Business</a>
-                            </div>
                         </div>
                         <div class="content">
                             <h4 class="title"><a
-                                    href="practce-area/juricial-law/27">Juricial
+                                    href="/juricial-law">Juricial
                                     Law</a></h4>
                             <p>If you are accused of committing a crime, you will need the very best criminal defense
                                 attorneys in Fresno. We...</p>
-                            <a href="practce-area/juricial-law/27"
+                            <a href="/juricial-law"
                                 class="readmore">Read More</a>
                         </div>
                     </div>
@@ -176,7 +158,7 @@
                             </ul>
                         </div>
                         <div class="price-footer">
-                            <a class="order-btn" href="price-plan/2">Order Now</a>
+                            <a class="order-btn" href="/price-plan-personal">Order Now</a>
                         </div>
                     </div>
                 </div>
@@ -196,7 +178,7 @@
                             </ul>
                         </div>
                         <div class="price-footer">
-                            <a class="order-btn" href="price-plan/3">Order Now</a>
+                            <a class="order-btn" href="/price-plan-professional">Order Now</a>
                         </div>
                     </div>
                 </div>
@@ -216,7 +198,7 @@
                             </ul>
                         </div>
                         <div class="price-footer">
-                            <a class="order-btn" href="price-plan/4">Order Now</a>
+                            <a class="order-btn" href="/price-plan-enterprise">Order Now</a>
                         </div>
                     </div>
                 </div>

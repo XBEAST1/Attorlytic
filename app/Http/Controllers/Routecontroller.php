@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class Homecontroller extends Controller
+class Routecontroller extends Controller
 {
-    public function index(){
-        return view('index');
+    public function index()
+    {
+        return view ('index');
     }
     public function appointment(){
         return view('appointment');
@@ -77,5 +79,44 @@ class Homecontroller extends Controller
     }
     public function categorydisputeresoulation(){
         return view('category-dispute-resoulation');
+    }
+    public function priceplanpersonal(){
+        return view('price-plan-personal');
+    }
+    public function priceplanprofessional(){
+        return view('price-plan-professional');
+    }
+    public function priceplanenterprise(){
+        return view('price-plan-enterprise');
+    }
+    public function raiseyourvoice(){
+        return view('raise-your-voice');
+    }
+    public function allowmiles(){
+        return view('allow-miles');
+    }
+    public function tosittingsubject(){
+        return view('to-sitting-subject');
+    }
+    public function fancyshestuff(){
+        return view('fancy-she-stuff');
+    }
+    public function bettydoyle(){
+        return view('betty-doyle');
+    }
+    public function johnierrante(){
+        return view('john-ierrante');
+    }
+    public function reneraniels(){
+        return view('rene-raniels');
+    }
+    public function davidfinch(){
+        return view('david-finch');
+    }
+    public function ruthchristian(){
+        return view('ruth-christian');
+    }
+    public function gregorykaster(){
+        return view('gregory-kaster');
     }
 }

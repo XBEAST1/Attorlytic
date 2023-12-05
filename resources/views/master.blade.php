@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="assets/uploads/media-uploader/favicon.png"
-        type="image/png">
+    <link rel="icon" href="assets/uploads/media-uploader/favicon.png" type="image/png">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -16,6 +15,7 @@
 
     <link rel="stylesheet" href="assets/frontend/css/animate.css">
     <link rel="stylesheet" href="assets/frontend/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/frontend/css/bootstrap.min4.css">
     <link rel="stylesheet" href="assets/frontend/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/frontend/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/frontend/css/all.min.css">
@@ -43,7 +43,7 @@
             <div class="responsive-mobile-menu">
                 <div class="logo-wrapper">
                     <a href="/" class="logo">
-                    <img src="assets/uploads/media-uploader/logo1621240982.png" alt />
+                        <img src="assets/uploads/media-uploader/logo1621240982.png" alt />
                     </a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu"
@@ -93,7 +93,7 @@
             </div>
         </div>
     </nav>
-    
+
     {{-- Footer --}}
 
     @yield('footer')
@@ -105,8 +105,8 @@
                         <div class=" footer-widget widget">
                             <div class="footer-widget widget">
                                 <div class="about_us_widget style-01"><img
-                                        src="assets/uploads/media-uploader/logo1621240982.png"
-                                        class="footer-logo" alt />
+                                        src="assets/uploads/media-uploader/logo1621240982.png" class="footer-logo"
+                                        alt />
                                     <p>Stimulated discretion impossible admiration in particular conviction up..</p>
                                 </div>
                             </div>
@@ -122,10 +122,9 @@
                                                 src="assets/uploads/media-uploader/thumb-new-blog-3-min1622622910.png"
                                                 alt /></div>
                                         <div class="content">
-                                            <h4 class="title"><a
-                                                    href="blog/raise-your-voice-against-laws-58/5">Raise
+                                            <h4 class="title"><a href="/raise-your-voice">Raise
                                                     your voice against laws.</a></h4>
-                                            <span class="time"> <i class="far fa-calendar-alt "></i>23 May 2021</span>
+                                            <span class="time"> <i class="far fa-calendar-alt "></i>15 July 2023</span>
                                         </div>
                                     </li>
                                     <li class="single-recent-post-item">
@@ -133,10 +132,9 @@
                                                 src="assets/uploads/media-uploader/thumb-new-blog-4-min1622622910.png"
                                                 alt /></div>
                                         <div class="content">
-                                            <h4 class="title"><a
-                                                    href="blog/allow-miles-wound-place-the-leave/4">Allow
+                                            <h4 class="title"><a href="/allow-miles">Allow
                                                     miles wound place the leave.</a></h4>
-                                            <span class="time"> <i class="far fa-calendar-alt "></i>23 May 2021</span>
+                                            <span class="time"> <i class="far fa-calendar-alt "></i>19 July 2023</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -248,3 +246,6 @@
     <script src="assets/frontend/js/isotope.pkgd.min.js"></script>
     <script src="assets/frontend/js/dynamic-script.js"></script>
     <script src="assets/frontend/js/main.js"></script>
+</body>
+
+</html>

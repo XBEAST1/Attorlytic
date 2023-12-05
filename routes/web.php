@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Homecontroller;
+use App\Http\Controllers\Routecontroller;
+use App\Http\Controllers\MultiUserAuthController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,30 +16,47 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [Homecontroller::class, 'index']);
-Route::get('/appointment', [Homecontroller::class, 'appointment']);
-Route::get('/blog', [Homecontroller::class, 'blog']);
-Route::get('/case', [Homecontroller::class, 'case']);
-Route::get('/about-us', [Homecontroller::class, 'aboutus']);
-Route::get('/consulation', [Homecontroller::class, 'consulation']);
-Route::get('/contact-us', [Homecontroller::class, 'contactus']);
-Route::get('/practice-area', [Homecontroller::class, 'practicearea']);
-Route::get('/price-plan', [Homecontroller::class, 'priceplan']);
-Route::get('/business-law', [Homecontroller::class, 'businesslaw']);
-Route::get('/family-law', [Homecontroller::class, 'familylaw']);
-Route::get('/criminal-law', [Homecontroller::class, 'criminallaw']);
-Route::get('/real-estate-law', [Homecontroller::class, 'realestate']);
-Route::get('/personal-injury', [Homecontroller::class, 'personalinjury']);
-Route::get('/juricial-law', [Homecontroller::class, 'juriciallaw']);
-Route::get('/cyber-crime', [Homecontroller::class, 'cybercrime']);
-Route::get('/social-work', [Homecontroller::class, 'socialwork']);
-Route::get('/family-problem', [Homecontroller::class, 'familyproblem']);
-Route::get('/varities-case', [Homecontroller::class, 'varitiescase']);
-Route::get('/land-collected', [Homecontroller::class, 'landcollected']);
-Route::get('/divorce-making', [Homecontroller::class, 'divorcemaking']);
-Route::get('/category-real-state', [Homecontroller::class, 'categoryrealstate']);
-Route::get('/category-criminal-offense', [Homecontroller::class, 'categorycriminaloffense']);
-Route::get('/category-dispute-resoulation', [Homecontroller::class, 'categorydisputeresoulation']);
+Route::controller(Routecontroller::class)->group(function(){
+    Route::get('/', 'index');
+    Route::get('/appointment', 'appointment');
+    Route::get('/blog', 'blog');
+    Route::get('/case', 'case');
+    Route::get('/about-us', 'aboutus');
+    Route::get('/consulation', 'consulation');
+    Route::get('/contact-us', 'contactus');
+    Route::get('/practice-area', 'practicearea');
+    Route::get('/price-plan', 'priceplan');
+    Route::get('/business-law', 'businesslaw');
+    Route::get('/family-law', 'familylaw');
+    Route::get('/criminal-law', 'criminallaw');
+    Route::get('/real-estate-law', 'realestate');
+    Route::get('/personal-injury', 'personalinjury');
+    Route::get('/juricial-law', 'juriciallaw');
+    Route::get('/cyber-crime', 'cybercrime');
+    Route::get('/social-work', 'socialwork');
+    Route::get('/family-problem', 'familyproblem');
+    Route::get('/varities-case', 'varitiescase');
+    Route::get('/land-collected', 'landcollected');
+    Route::get('/divorce-making', 'divorcemaking');
+    Route::get('/category-real-state', 'categoryrealstate');
+    Route::get('/category-criminal-offense', 'categorycriminaloffense');
+    Route::get('/category-dispute-resoulation', 'categorydisputeresoulation');
+    Route::get('/price-plan-personal', 'priceplanpersonal');
+    Route::get('/price-plan-professional', 'priceplanprofessional');
+    Route::get('/price-plan-enterprise', 'priceplanenterprise');
+    Route::get('/raise-your-voice', 'raiseyourvoice');
+    Route::get('/allow-miles', 'allowmiles');
+    Route::get('/to-sitting-subject', 'tosittingsubject');
+    Route::get('/fancy-she-stuff', 'fancyshestuff');
+    Route::get('/betty-doyle', 'bettydoyle');
+    Route::get('/john-ierrante', 'johnierrante');
+    Route::get('/rene-raniels', 'reneraniels');
+    Route::get('/david-finch', 'davidfinch');
+    Route::get('/ruth-christian', 'ruthchristian');
+    Route::get('/gregory-kaster', 'gregorykaster');
+});
+
+Route::get('/home', [MultiUserAuthController::class, 'index'])->middleware('auth')->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

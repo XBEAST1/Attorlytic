@@ -662,7 +662,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <a href="appointment/david-finch/35">
+                                    <a href="/david-finch">
                                         <h4 class="title">David Finch</h4>
                                     </a>
                                     <span class="designation">Assosiate, Attorlytic</span>
@@ -670,7 +670,7 @@
                                     <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>Tehran, Iran</span>
                                     <p>Travelling salesman - and above it...</p>
                                     <div class="btn-wrapper my-3">
-                                        <a href="appointment/david-finch/35"
+                                        <a href="/david-finch"
                                             class="boxed-btn">Book Now</a>
                                     </div>
                                 </div>
@@ -682,7 +682,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <a href="appointment/betty-doyle/36">
+                                    <a href="/betty-doyle">
                                         <h4 class="title">Betty Doyle</h4>
                                     </a>
                                     <span class="designation">Assosiate, Attorlytic</span>
@@ -691,7 +691,7 @@
                                         Australia</span>
                                     <p>Travelling salesman - and above it...</p>
                                     <div class="btn-wrapper my-3">
-                                        <a href="appointment/betty-doyle/36"
+                                        <a href="/betty-doyle"
                                             class="boxed-btn">Book Now</a>
                                     </div>
                                 </div>
@@ -703,7 +703,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <a href="appointment/john-ierrante/37">
+                                    <a href="/john-ierrante">
                                         <h4 class="title">John Ierrante</h4>
                                     </a>
                                     <span class="designation">Director</span>
@@ -712,7 +712,7 @@
                                         England</span>
                                     <p>Travelling salesman - and above it...</p>
                                     <div class="btn-wrapper my-3">
-                                        <a href="appointment/john-ierrante/37"
+                                        <a href="/john-ierrante"
                                             class="boxed-btn">Book Now</a>
                                     </div>
                                 </div>
@@ -724,7 +724,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <a href="appointment/rene-raniels-01/38">
+                                    <a href="/gregory-kaster">
                                         <h4 class="title">Gregory Kaster</h4>
                                     </a>
                                     <span class="designation">Assosiate, Attorlytic</span>
@@ -732,7 +732,7 @@
                                     <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>New York</span>
                                     <p>Travelling salesman - and above it...</p>
                                     <div class="btn-wrapper my-3">
-                                        <a href="appointment/rene-raniels-01/38"
+                                        <a href="/gregory-kaster"
                                             class="boxed-btn">Book Now</a>
                                     </div>
                                 </div>
@@ -767,14 +767,14 @@
                                 <div class="content">
                                     <ul class="post-meta">
                                         <li><a
-                                                href="blog/fancy-she-stuff-after-aware/2"><i
-                                                    class="fa fa-calendar"></i> 2 years ago</a></li>
+                                                href="/fancy-she-stuff"><i
+                                                    class="fa fa-calendar"></i> 5 months ago</a></li>
                                         <li><a
-                                                href="blog/fancy-she-stuff-after-aware/2"><i
+                                                href="/fancy-she-stuff"><i
                                                     class="fa fa-user"></i> Sohan</a></li>
                                     </ul>
                                     <h4 class="title"><a
-                                            href="blog/fancy-she-stuff-after-aware/2">Fancy
+                                            href="/fancy-she-stuff">Fancy
                                             she stuff after aware</a></h4>
                                 </div>
                             </div>
@@ -786,14 +786,14 @@
                                 <div class="content">
                                     <ul class="post-meta">
                                         <li><a
-                                                href="blog/to-sitting-subject-no-improve/3"><i
-                                                    class="fa fa-calendar"></i> 2 years ago</a></li>
+                                                href="/to-sitting-subject"><i
+                                                    class="fa fa-calendar"></i> 5 months ago</a></li>
                                         <li><a
-                                                href="blog/to-sitting-subject-no-improve/3"><i
+                                                href="/to-sitting-subject"><i
                                                     class="fa fa-user"></i> Sohan</a></li>
                                     </ul>
                                     <h4 class="title"><a
-                                            href="blog/to-sitting-subject-no-improve/3">To
+                                            href="/to-sitting-subject">To
                                             sitting subject no improve.</a></h4>
                                 </div>
                             </div>
@@ -805,14 +805,14 @@
                                 <div class="content">
                                     <ul class="post-meta">
                                         <li><a
-                                                href="blog/allow-miles-wound-place-the-leave/4"><i
-                                                    class="fa fa-calendar"></i> 2 years ago</a></li>
+                                                href="/allow-miles"><i
+                                                    class="fa fa-calendar"></i> 5 months ago</a></li>
                                         <li><a
-                                                href="blog/allow-miles-wound-place-the-leave/4"><i
+                                                href="/allow-miles"><i
                                                     class="fa fa-user"></i> Sohan</a></li>
                                     </ul>
                                     <h4 class="title"><a
-                                            href="blog/allow-miles-wound-place-the-leave/4">Allow
+                                            href="/allow-miles">Allow
                                             miles wound place the leave.</a></h4>
                                 </div>
                             </div>
@@ -824,14 +824,14 @@
                                 <div class="content">
                                     <ul class="post-meta">
                                         <li><a
-                                                href="blog/raise-your-voice-against-laws-58/5"><i
-                                                    class="fa fa-calendar"></i> 2 years ago</a></li>
+                                                href="/raise-your-voice"><i
+                                                    class="fa fa-calendar"></i> 5 months ago</a></li>
                                         <li><a
-                                                href="blog/raise-your-voice-against-laws-58/5"><i
+                                                href="/raise-your-voice"><i
                                                     class="fa fa-user"></i> Sohan</a></li>
                                     </ul>
                                     <h4 class="title"><a
-                                            href="blog/raise-your-voice-against-laws-58/5">Raise
+                                            href="/raise-your-voice">Raise
                                             your voice against laws.</a></h4>
                                 </div>
                             </div>

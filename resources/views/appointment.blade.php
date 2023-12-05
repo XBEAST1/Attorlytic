@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <div class="content">
-                            <a href="appointment/rene-raniels-27/40">
+                            <a href="/rene-raniels">
                                 <h4 class="title">Rene Raniels</h4>
                             </a>
                             <span class="designation">Assosiate, Attorlytic</span>
@@ -78,7 +78,7 @@
                             <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>Sydney, Australia</span>
                             <p>Travelling salesman - and above it...</p>
                             <div class="btn-wrapper my-3">
-                                <a href="appointment/rene-raniels-27/40"
+                                <a href="/rene-raniels"
                                     class="boxed-btn">Book Now</a>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                             </div>
                         </div>
                         <div class="content">
-                            <a href="appointment39">
+                            <a href="/ruth-christian">
                                 <h4 class="title">Ruth Christian</h4>
                             </a>
                             <span class="designation">Attorlytic</span>
@@ -100,7 +100,7 @@
                             <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>Auckland, Ireland</span>
                             <p>Travelling salesman - and above it...</p>
                             <div class="btn-wrapper my-3">
-                                <a href="appointment39"
+                                <a href="/ruth-christian"
                                     class="boxed-btn">Book Now</a>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <div class="content">
-                            <a href="appointment/rene-raniels-01/38">
+                            <a href="/gregory-kaster">
                                 <h4 class="title">Gregory Kaster</h4>
                             </a>
                             <span class="designation">Assosiate, Attorlytic</span>
@@ -122,7 +122,7 @@
                             <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>New York</span>
                             <p>Travelling salesman - and above it...</p>
                             <div class="btn-wrapper my-3">
-                                <a href="appointment/rene-raniels-01/38"
+                                <a href="/gregory-kaster"
                                     class="boxed-btn">Book Now</a>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                             </div>
                         </div>
                         <div class="content">
-                            <a href="appointment/john-ierrante/37">
+                            <a href="/john-ierrante">
                                 <h4 class="title">John Ierrante</h4>
                             </a>
                             <span class="designation">Director</span>
@@ -144,7 +144,7 @@
                             <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>London, England</span>
                             <p>Travelling salesman - and above it...</p>
                             <div class="btn-wrapper my-3">
-                                <a href="appointment/john-ierrante/37"
+                                <a href="/john-ierrante"
                                     class="boxed-btn">Book Now</a>
                             </div>
                         </div>
@@ -158,7 +158,7 @@
                             </div>
                         </div>
                         <div class="content">
-                            <a href="appointment/betty-doyle/36">
+                            <a href="/betty-doyle">
                                 <h4 class="title">Betty Doyle</h4>
                             </a>
                             <span class="designation">Assosiate, Attorlytic</span>
@@ -166,7 +166,7 @@
                             <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>Melborn, Australia</span>
                             <p>Travelling salesman - and above it...</p>
                             <div class="btn-wrapper my-3">
-                                <a href="appointment/betty-doyle/36"
+                                <a href="/betty-doyle"
                                     class="boxed-btn">Book Now</a>
                             </div>
                         </div>
@@ -180,7 +180,7 @@
                             </div>
                         </div>
                         <div class="content">
-                            <a href="appointment/david-finch/35">
+                            <a href="/david-finch">
                                 <h4 class="title">David Finch</h4>
                             </a>
                             <span class="designation">Assosiate, Attorlytic</span>
@@ -188,7 +188,7 @@
                             <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>Tehran, Iran</span>
                             <p>Travelling salesman - and above it...</p>
                             <div class="btn-wrapper my-3">
-                                <a href="appointment/david-finch/35"
+                                <a href="/david-finch"
                                     class="boxed-btn">Book Now</a>
                             </div>
                         </div>

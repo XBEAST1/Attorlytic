@@ -48,7 +48,7 @@
                             </ul>
                         </div>
                         <div class="price-footer">
-                            <a class="order-btn" href="price-plan/2">Order Now</a>
+                            <a class="order-btn" href="/price-plan-personal">Order Now</a>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                             </ul>
                         </div>
                         <div class="price-footer">
-                            <a class="order-btn" href="price-plan/3">Order Now</a>
+                            <a class="order-btn" href="/price-plan-professional">Order Now</a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                             </ul>
                         </div>
                         <div class="price-footer">
-                            <a class="order-btn" href="price-plan/4">Order Now</a>
+                            <a class="order-btn" href="/price-plan-enterprise">Order Now</a>
                         </div>
                     </div>
                 </div>
