@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="assets/frontend/css/form.css">
-<title>Attorlytic Login Form</title>
+<title>Attorlytic Register Form</title>
 
 <x-guest-layout>
     <div class="wrapper">
@@ -26,27 +26,22 @@
             <div class="input-field">
                 <x-input-error :messages="$errors->get('password')" />
                 <input required id="password" type="password" name="password" required
-                    autocomplete="current-password" />
+                    autocomplete="new-password" />
                 <label for="password" :value="__('Password')">Enter your password</label>
             </div>
 
             <!-- Confirm Password -->
             <div class="input-field">
                 <x-input-error :messages="$errors->get('password')" />
-                <input required id="password" type="password" name="password" required
-                    autocomplete="current-password" />
-                <label for="password" :value="__('Confirm Password')">Enter your password</label>
+                <input required id="password_confirmation" type="password" name="password_confirmation" required
+                    autocomplete="new-password" />
+                <label for="password_confirmation" :value="__('Confirm Password')">Enter your password</label>
             </div>
 
-            <div>
-                <a
-                    href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
+            <button type="submit">{{ __('Register') }}</button>
 
-                <x-primary-button>
-                    {{ __('Register') }}
-                </x-primary-button>
+            <div class="register">
+                <p>Already registered? <a href="{{ route('login') }}">Login</a></p>
             </div>
         </form>
     </div>

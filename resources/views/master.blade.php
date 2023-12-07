@@ -14,17 +14,15 @@
 
 
     <link rel="stylesheet" href="assets/frontend/css/animate.css">
-    <link rel="stylesheet" href="assets/frontend/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/frontend/css/bootstrap.min4.css">
     <link rel="stylesheet" href="assets/frontend/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/frontend/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/frontend/css/all.min.css">
     <link rel="stylesheet" href="assets/frontend/css/flaticon.css">
     <link rel="stylesheet" href="assets/frontend/css/dynamic-style.css">
-    <link rel="stylesheet" href="assets/frontend/css/style.css">
     <link rel="stylesheet" href="assets/frontend/css/responsive.css">
-    <script src="assets/common/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/common/js/jquery-migrate-3.3.2.min.js"></script>
+    <link rel="stylesheet" href="assets/frontend/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/frontend/css/style.css">
 
     <style>
         :root {
@@ -88,8 +86,25 @@
                 </ul>
             </div>
             <div>
+                @auth
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+                <div class="input-group ms-5">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">{{ auth()->user()->name }}</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="profile">Profile</a></li>
+                        <li><a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                @else
                 <a class="btn ms-5" href="/login">Login</a>
                 <a class="btn ms-3" href="/register">Register</a>
+                @endauth
             </div>
         </div>
     </nav>
@@ -236,7 +251,8 @@
         </div>
     </div>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="assets/frontend/js/bootstrap.min.js"></script>
+    <script src="assets/common/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/common/js/jquery-migrate-3.3.2.min.js"></script>
     <script src="assets/frontend/js/jquery.magnific-popup.js"></script>
     <script src="assets/frontend/js/wow.min.js"></script>
     <script src="assets/frontend/js/owl.carousel.min.js"></script>
@@ -245,6 +261,7 @@
     <script src="assets/frontend/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/frontend/js/isotope.pkgd.min.js"></script>
     <script src="assets/frontend/js/dynamic-script.js"></script>
+    <script src="assets/frontend/js/bootstrap.bundle.min.js"></script>
     <script src="assets/frontend/js/main.js"></script>
 </body>
 

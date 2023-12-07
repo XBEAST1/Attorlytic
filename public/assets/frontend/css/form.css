@@ -47,6 +47,11 @@ h2 {
   color: #fff;
 }
 
+p {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
 .input-field {
   position: relative;
   border-bottom: 2px solid #ccc;
@@ -130,8 +135,68 @@ button:hover {
   background: rgba(255, 255, 255, 0.15);
 }
 
-.register {
+.login {
   text-align: center;
   margin-top: 30px;
   color: #fff;
+}
+
+.register {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.update {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 15px 0;
+}
+
+.update label {
+  position: absolute;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+.update input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.xwrapper {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, input[type=password]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=number]:focus, textarea:focus, input[type=button]:focus, input[type=reset]:focus, input[type=submit]:focus, select:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0px solid #ddd;
+}
+
+
+.navbar-area.nav-style-01 {
+  backdrop-filter: blur(9px);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-area.nav-style-01 .nav-container {
+  backdrop-filter: blur(9px);
+  background-color: rgba(0, 0, 0, 0);
 }
