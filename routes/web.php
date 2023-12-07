@@ -58,9 +58,9 @@ Route::controller(Routecontroller::class)->group(function(){
 
 Route::get('/home', [MultiUserAuthController::class, 'index'])->middleware('auth')->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/index', function () {
+    return view('index');
+})->middleware(['auth', 'verified'])->name('index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
