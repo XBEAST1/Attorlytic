@@ -30,34 +30,23 @@
                             <div class="nav nav-tabs" role="tablist">
                                 <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
                                     role="tab" aria-selected="true"><i class="fas fa-user"></i></a>
-                                <a class="nav-item nav-link   disabled " disabled id="nav-profile-tab" data-toggle="tab"
-                                    href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><i
-                                        class="fas fa-address-book"></i></a>
                             </div>
                         </nav>
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
-                                <div class="checkout-type margin-bottom-30">
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="guest_logout"
-                                            name="checkout_type">
-                                        <label class="custom-control-label" for="guest_logout">Guest Order</label>
-                                    </div>
-                                </div>
                                 <div class="login-form">
-                                    <form action="login" method="post"
-                                        enctype="multipart/form-data" class="contact-page-form style-01"
-                                        id="login_form_order_page">
-                                        <input type="hidden" name="_token"
-                                            value="pq6G26W6H6D08kC3vzalTOBLpgVmAwBJSKkTzReK">
-                                        <div class="error-wrap"></div>
+                                    <form class="contact-page-form style-01" method="POST"
+                                        action="{{ route('login') }}">
+                                        @csrf
                                         <div class="form-group">
-                                            <input type="text" name="username" class="form-control"
-                                                placeholder="Username">
+                                            <input class="form-control" placeholder="Username" input type="text"
+                                                required id="email" type="email" name="email" :value="old('email')"
+                                                required autofocus autocomplete="username">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="password" class="form-control"
-                                                placeholder="Password">
+                                            <input class="form-control" placeholder="Password" required id="password"
+                                                type="password" name="password" required
+                                                autocomplete="current-password">
                                         </div>
                                         <div class="form-group btn-wrapper">
                                             <button class="boxed-btn btn-saas btn-block" id="login_btn"
@@ -66,22 +55,20 @@
                                         <div class="row mb-4 rmber-area">
                                             <div class="col-6">
                                                 <div class="custom-control custom-checkbox ">
-                                                    <input type="checkbox" name="remember" class="custom-control-input"
-                                                        id="remember">
+                                                    <input type="checkbox" id="remember_me" type="checkbox"
+                                                        name="remember" class="custom-control-input" id="remember">
                                                     <label class="custom-control-label" for="remember">Remember
                                                         Me</label>
                                                 </div>
                                             </div>
                                             <div class="col-6 text-right">
-                                                <a class="d-block"
-                                                    href="register">Create new
+                                                <a class="d-block" href="register">Create new
                                                     account?</a>
-                                                <a href="login/forget-password">Forgot
-                                                    Password?</a>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
+                            </div>
                                 <div class="form-group btn-wrapper">
                                     <button class="next-step-button btn-small ds-none" style="display: none"
                                         id="login_btn" type="submit">Next Step</button>

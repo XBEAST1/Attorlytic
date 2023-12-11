@@ -1,11 +1,12 @@
 <link rel="stylesheet" href="assets/frontend/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/frontend/css/all.min.css">
 <link rel="stylesheet" href="assets/frontend/css/style.css">
-<link rel="stylesheet" href="assets/frontend/css/owl.carousel.min.css">
 <link rel="stylesheet" href="assets/frontend/css/form.css">
+<link rel="icon" href="assets/uploads/media-uploader/favicon.png" type="image/png">
 <title>Attorlytic Register Form</title>
 <style>
     .margin {
-        margin-top: 6rem!important;
+        margin-top: 6rem !important;
     }
 </style>
 <nav class="navbar navbar-area navbar-expand-lg nav-style-01 fixed-top">
@@ -87,9 +88,9 @@
             <h2>Register</h2>
             <!-- Name -->
             <div class="input-field">
-                <x-input-error :messages="$errors->get('name')"/>
-                    <input type="text" required id="name" type="name" name="name" :value="old('name')" required
-                    autofocus autocomplete="username" />
+                <x-input-error :messages="$errors->get('name')" />
+                <input type="text" required id="name" type="name" name="name" :value="old('name')" required autofocus
+                    autocomplete="username" />
                 <label for="name" :value="__('Name')">Enter your name</label>
             </div>
 
@@ -104,8 +105,7 @@
             <!-- Password -->
             <div class="input-field">
                 <x-input-error :messages="$errors->get('password')" />
-                <input required id="password" type="password" name="password" required
-                    autocomplete="new-password" />
+                <input required id="password" type="password" name="password" required autocomplete="new-password" />
                 <label for="password" :value="__('Password')">Enter your password</label>
             </div>
 
@@ -129,15 +129,18 @@
             </div>
         </form>
     </div>
+    <script src="assets/common/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/frontend/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/frontend/js/bootstrap.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var adminCheckbox = document.getElementById('admin');
             var usertypeInput = document.getElementById('usertype');
-    
+
             adminCheckbox.addEventListener('change', function () {
                 usertypeInput.value = adminCheckbox.checked ? 'admin' : 'user';
             });
         });
     </script>
-    
+
 </x-guest-layout>

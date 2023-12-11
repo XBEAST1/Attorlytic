@@ -31,7 +31,7 @@
                                 <li><i class="far fa-user"></i> Sohan</li>
                                 <li><i class="far fa-calendar-alt"></i> 2 years ago</li>
                             </ul>
-                            <h4 class="title"><a href="blog/fancy-she-stuff-after-aware/2">Fancy she stuff after aware
+                            <h4 class="title"><a href="/fancy-she-stuff">Fancy she stuff after aware
                                 </a></h4>
                             <p>
                             <p style="text-align:justify;"><span
@@ -40,7 +40,7 @@
                                     indulgence unreserved connection alteration appearance my an astonished. Up as seen
                                     sent make he they of. Her raising and himself pasture believe...</p>
                             <div class="btn-wrapper">
-                                <a href="blog/fancy-she-stuff-after-aware/2" class="boxed-btn">Read More</a>
+                                <a href="/fancy-she-stuff" class="boxed-btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                                 <li><i class="far fa-user"></i> Sohan</li>
                                 <li><i class="far fa-calendar-alt"></i> 2 years ago</li>
                             </ul>
-                            <h4 class="title"><a href="blog/to-sitting-subject-no-improve/3">To sitting subject no
+                            <h4 class="title"><a href="/to-sitting-subject">To sitting subject no
                                     improve.
                                 </a></h4>
                             <p>
@@ -63,7 +63,7 @@
                                     indulgence unreserved connection alteration appearance my an astonished. Up as seen
                                     sent make he they of. Her raising and himself pasture believe...</p>
                             <div class="btn-wrapper">
-                                <a href="blog/to-sitting-subject-no-improve/3" class="boxed-btn">Read More</a>
+                                <a href="/to-sitting-subject" class="boxed-btn">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                                 <li><i class="far fa-user"></i> Sohan</li>
                                 <li><i class="far fa-calendar-alt"></i> 2 years ago</li>
                             </ul>
-                            <h4 class="title"><a href="blog/allow-miles-wound-place-the-leave/4">Allow miles wound place
+                            <h4 class="title"><a href="/allow-miles">Allow miles wound place
                                     the leave.
                                 </a></h4>
                             <p>
@@ -86,24 +86,9 @@
                                     indulgence unreserved connection alteration appearance my an astonished. Up as seen
                                     sent make he they of. Her raising and himself pasture believe...</p>
                             <div class="btn-wrapper">
-                                <a href="blog/allow-miles-wound-place-the-leave/4" class="boxed-btn">Read More</a>
+                                <a href="/allow-miles" class="boxed-btn">Read More</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="blog-pagination desktop-center">
-                        <nav>
-                            <ul class="pagination">
-                                <li class="page-item disabled" aria-disabled="true" aria-label="&laquo; Previous">
-                                    <span class="page-link" aria-hidden="true">&lsaquo;</span>
-                                </li>
-                                <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
-                                <li class="page-item"><a class="page-link" href="blog?page=2">2</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="blog?page=2" rel="next"
-                                        aria-label="Next &raquo;">&rsaquo;</a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -159,7 +144,7 @@
                                                     alt /></div>
                                             <div class="content">
                                                 <h4 class="title"><a
-                                                        href="blog/allow-miles-wound-place-the-leave/4">Allow miles
+                                                        href="/allow-miles">Allow miles
                                                         wound place the leave.</a></h4>
                                                 <span class="time"> <i class="far fa-calendar-alt "></i>23 May
                                                     2021</span>
@@ -170,7 +155,7 @@
                                                     src="assets/uploads/media-uploader/thumb-new-blog-1-min1622622909.png"
                                                     alt /></div>
                                             <div class="content">
-                                                <h4 class="title"><a href="blog/to-sitting-subject-no-improve/3">To
+                                                <h4 class="title"><a href="/to-sitting-subject">To
                                                         sitting subject no improve.</a></h4>
                                                 <span class="time"> <i class="far fa-calendar-alt "></i>23 May
                                                     2021</span>
@@ -181,7 +166,7 @@
                                                     src="assets/uploads/media-uploader/thumb-new-blog-2-min1622622909.png"
                                                     alt /></div>
                                             <div class="content">
-                                                <h4 class="title"><a href="blog/fancy-she-stuff-after-aware/2">Fancy she
+                                                <h4 class="title"><a href="/fancy-she-stuff">Fancy she
                                                         stuff after aware</a></h4>
                                                 <span class="time"> <i class="far fa-calendar-alt "></i>23 May
                                                     2021</span>

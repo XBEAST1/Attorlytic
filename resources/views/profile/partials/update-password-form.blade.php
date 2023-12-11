@@ -33,12 +33,12 @@
                     autocomplete="new-password" />
                 <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" />
             </div>
-            <button type="submit">{{ __('Save') }}</button>
+            <button type="submit">{{ __('Update Password') }}</button>
 
             <div>
                 @if (session('status') === 'password-updated')
-                <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)">{{
-                    __('Saved.') }}</p>
+                <p class="mt-3" x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)">{{
+                    __('Password Updated.') }}</p>
                 @endif
             </div>
         </form>

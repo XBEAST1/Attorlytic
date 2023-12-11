@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="assets/frontend/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/frontend/css/all.min.css">
 <link rel="stylesheet" href="assets/frontend/css/style.css">
-<link rel="stylesheet" href="assets/frontend/css/owl.carousel.min.css">
 <link rel="stylesheet" href="assets/frontend/css/form.css">
+<link rel="icon" href="assets/uploads/media-uploader/favicon.png" type="image/png">
 <title>Attorlytic Login Form</title>
 <nav class="navbar navbar-area navbar-expand-lg nav-style-01 fixed-top">
     <div class="container nav-container">
@@ -103,11 +104,6 @@
                   <input type="checkbox" id="remember_me" type="checkbox" name="remember">
                   <p>{{ __('Remember me') }}</p>
                 </label>
-                @if (Route::has('password.request'))
-                    <a href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
             </div>
             <button type="submit">{{ __('Log in') }}</button>
 
@@ -116,4 +112,6 @@
             </div>
         </form>
     </div>
+    <script src="assets/common/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/frontend/js/bootstrap.min.js"></script>
 </x-guest-layout>

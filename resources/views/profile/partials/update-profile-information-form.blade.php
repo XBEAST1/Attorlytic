@@ -50,12 +50,12 @@
                 @endif
             </div>
 
-            <button type="submit">{{ __('Save') }}</button>
+            <button type="submit">{{ __('Update Profile') }}</button>
             <div>
 
                 @if (session('status') === 'profile-updated')
-                <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)">{{
-                    __('Saved.') }}</p>
+                <p class="mt-3" x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)">{{
+                    __('Profile Updated.') }}</p>
                 @endif
             </div>
         </form>

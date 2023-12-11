@@ -87,7 +87,6 @@
             </div>
             <div>
                 @auth
-
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
@@ -95,6 +94,9 @@
                     <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">{{ auth()->user()->name }}</button>
                     <ul class="dropdown-menu">
+                        @if(auth()->user()->usertype == 'admin')
+                        <li><a class="dropdown-item" href="home">Admin Panel</a></li>
+                        @endif
                         <li><a class="dropdown-item" href="profile">Profile</a></li>
                         <li><a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
@@ -262,6 +264,7 @@
     <script src="assets/frontend/js/isotope.pkgd.min.js"></script>
     <script src="assets/frontend/js/dynamic-script.js"></script>
     <script src="assets/frontend/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/frontend/js/bootstrap.min.js"></script>
     <script src="assets/frontend/js/main.js"></script>
 </body>
 
