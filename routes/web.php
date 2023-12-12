@@ -58,6 +58,10 @@ Route::controller(Routecontroller::class)->group(function(){
 
 Route::get('/home', [MultiUserAuthController::class, 'index'])->middleware('auth')->name('home');
 
+Route::middleware('admin')->group(function () {
+    Route::get('/updateprofile', [Routecontroller::class, 'updateprofile']);
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

@@ -4,6 +4,11 @@
 <link rel="stylesheet" href="assets/frontend/css/form.css">
 <link rel="icon" href="assets/uploads/media-uploader/favicon.png" type="image/png">
 <title>Attorlytic Login Form</title>
+<style>
+    .margin {
+        margin-top: 11rem !important;
+    }
+</style>
 <nav class="navbar navbar-area navbar-expand-lg nav-style-01 fixed-top">
     <div class="container nav-container">
         <div class="responsive-mobile-menu">
@@ -80,7 +85,7 @@
     <!-- Session Status -->
     <x-auth-session-status :status="session('status')" />
 
-    <div class="wrapper mt-5">
+    <div class="wrapper margin">
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <!-- Email Address -->

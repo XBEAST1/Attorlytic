@@ -6,7 +6,7 @@
 <title>Attorlytic Register Form</title>
 <style>
     .margin {
-        margin-top: 6rem !important;
+        margin-top: 9rem !important;
     }
 </style>
 <nav class="navbar navbar-area navbar-expand-lg nav-style-01 fixed-top">
@@ -118,7 +118,7 @@
             </div>
 
             <div class="input-field">
-                <label for="admin">Register as Admin:</label>
+                <label for="admin">Register as Lawyer:</label>
                 <input type="checkbox" id="admin" name="usertype" value="admin" style="transform: scale(0.5);">
             </div>
 

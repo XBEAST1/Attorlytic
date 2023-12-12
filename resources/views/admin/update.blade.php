@@ -15,7 +15,7 @@
     <body>
 
         <div id="sidebar">
-            <h2 id="admin-heading">Admin Panel</h2>
+            <h2>Admin Panel</h2>
             <div class="side-pages mt-5">
                 <a href="home" id="add-profile">Add Profile</a>
                 <a href="updateprofile" id="update-profile">Update Profile</a>
@@ -23,7 +23,7 @@
         </div>
 
         <div id="content">
-            <h2>Add Profile</h2>
+            <h2>Update Profile</h2>
             <br>
             <form>
                 <div class="form-group">

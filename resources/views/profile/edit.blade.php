@@ -73,7 +73,10 @@
                     <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">{{ auth()->user()->name }}</button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="profile">Profile</a></li>
+                        @if(auth()->user()->usertype == 'admin')
+                        <li><a class="dropdown-item" href="home">Admin Panel</a></li>
+                        @endif
+                        <li><a class="dropdown-item" href="profile">Settings</a></li>
                         <li><a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                         </li>

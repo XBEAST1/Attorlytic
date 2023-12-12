@@ -119,4 +119,7 @@ class Routecontroller extends Controller
     public function gregorykaster(){
         return view('gregory-kaster');
     }
+    public function updateprofile(){
+        return view('admin.update');
+    }
 }

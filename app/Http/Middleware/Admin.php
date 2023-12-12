@@ -19,7 +19,8 @@ class admin
         {
             return $next($request);
         }
-
-        abort(401);
+        else{
+            return back();
+        }
     }
 }
