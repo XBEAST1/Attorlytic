@@ -15,7 +15,10 @@
     <body>
 
         <div id="sidebar">
-            <h2>Admin Panel</h2>
+            <a href="/" class="logo">
+                <img src="assets/uploads/media-uploader/logo1621240982.png" alt />
+            </a>
+            <h2 id="admin-heading">Admin Panel</h2>
             <div class="side-pages mt-5">
                 <a href="home" id="add-profile">Add Profile</a>
                 <a href="updateprofile" id="update-profile">Update Profile</a>
@@ -23,7 +26,7 @@
         </div>
 
         <div id="content">
-            <h2>Update Profile</h2>
+            <h2 id="profile-heading">Update Profile</h2>
             <br>
             <form>
                 <div class="form-group">
@@ -36,6 +39,23 @@
                 <div class="form-group">
                     <label for="description">Description</label> <br>
                     <textarea class="mt-2 rounded-5 p-2" id="description" rows="5"></textarea>
+                </div>
+                <br>
+                <h5>Gender</h5>
+                <br>
+                <div class="form-check">
+                    <input type="radio" name="gender" value="male" id="male" class="form-check-input">
+                    <label for="" class="form-check-label">Male</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="gender" value="female" id="female" class="ms-2 form-check-input">
+                    <label for="" class="ms-2 form-check-label">Female</label>
+                </div>
+                <br>
+                <br>
+                <div class="form-group w-50">
+                    <label class="form-label" for="image">Image</label> <br>
+                    <input type="file" class="form-control file" name="image">
                 </div>
                 <br>
                 <div class="form-group">

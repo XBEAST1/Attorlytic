@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Formcontroller;
 use App\Http\Controllers\Routecontroller;
 use App\Http\Controllers\MultiUserAuthController;
 use App\Http\Controllers\ProfileController;
@@ -60,7 +61,9 @@ Route::get('/home', [MultiUserAuthController::class, 'index'])->middleware('auth
 
 Route::middleware('admin')->group(function () {
     Route::get('/updateprofile', [Routecontroller::class, 'updateprofile']);
+    Route::post('/home', [Formcontroller::class, 'store_data']);
 });
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
