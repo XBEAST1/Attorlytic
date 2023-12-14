@@ -8,7 +8,8 @@ use App\Models\FormData;
 
 class Formcontroller extends Controller
 {
-    function store_data(Request $request) {
+    function store_data(Request $request)
+    {
         $validator = Validator::make($request->all(), [
             'firstname' => 'required',
             'lastname' => 'required',
@@ -25,7 +26,7 @@ class Formcontroller extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
+            return redirect()->back()->with('status', 'error')->with('message', 'Please Fill All Fields');
         }
 
         $data = new FormData();
@@ -34,6 +35,7 @@ class Formcontroller extends Controller
         $data->lastname = $request->input('lastname');
         $data->description = $request->input('description');
         $data->gender = $request->input('gender');
+        $data->fee = $request->input('fee');
         $data->country = $request->input('country');
         $data->city = $request->input('city');
         $data->educationinfo = $request->input('educationinfo');
@@ -51,6 +53,6 @@ class Formcontroller extends Controller
 
         $data->save();
 
-        return redirect()->back();
+        return redirect()->back()->with('status', 'success')->with('message', 'Data submitted successfully!');
     }
 }

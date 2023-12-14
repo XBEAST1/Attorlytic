@@ -16,6 +16,7 @@ class FormData extends Model
         'lastname',
         'description',
         'gender',
+        'fee',
         'country',
         'city',
         'educationinfo',

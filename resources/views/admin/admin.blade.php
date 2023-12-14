@@ -11,6 +11,7 @@
 
 <body>
     </head>
+
     <body>
         <div id="sidebar">
             <a href="/" class="logo">
@@ -24,8 +25,21 @@
         </div>
         <div id="content">
             <h2 id="profile-heading">Add Profile</h2>
+            @if(session('status') && session('message') && session('status') === 'success')
+            <div class="alert alert-success alert-dismissible fade show">
+                <strong>Success!</strong> Profile Added Successfully.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            @endif
+
+            @if(session('status') && session('message') && session('status') === 'error')
+            <div class="alert alert-danger alert-dismissible fade show">
+                <strong>Error!</strong> Please Fill All The Fields.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            @endif
             <br>
-            <form action="home" method="post" enctype="multipart/form-data">
+            <form action="home" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
                 @csrf
                 <div class="form-group">
                     <label for="username">First Name</label>
@@ -72,9 +86,12 @@
                     <label for="education-info">Education Info</label>
                     <label class="additional-info" for="additional-info">Additional Info</label>
                     <label class="specialize-info" for="specialize-info">Specialize Info</label> <br>
-                    <input class="mt-2 rounded-5 p-2" name="educationinfo" type="text" class="form-control" id="education-info">
-                    <input class="mt-2 rounded-5 p-2 ms-2" name="additionalinfo" type="text" class="form-control" id="additional-info">
-                    <input class="mt-2 rounded-5 p-2 ms-2" name="specializeinfo" type="text" class="form-control" id="specialize-info">
+                    <input class="mt-2 rounded-5 p-2" name="educationinfo" type="text" class="form-control"
+                        id="education-info">
+                    <input class="mt-2 rounded-5 p-2 ms-2" name="additionalinfo" type="text" class="form-control"
+                        id="additional-info">
+                    <input class="mt-2 rounded-5 p-2 ms-2" name="specializeinfo" type="text" class="form-control"
+                        id="specialize-info">
                 </div>
                 <br>
                 <div class="form-group">
@@ -86,7 +103,27 @@
                 <button type="submit" value="add" class="form-button btn btn-light rounded-4 p-3">Submit</button>
             </form>
         </div>
-        
+        <script src="assets/frontend/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var successPopup = document.getElementById('success-popup');
+                var errorPopup = document.getElementById('error-popup');
+
+                if (successPopup) {
+                    successPopup.style.display = 'block';
+                    setTimeout(function () {
+                        successPopup.style.display = 'none';
+                    }, 5000);
+                }
+
+                if (errorPopup) {
+                    errorPopup.style.display = 'block';
+                    setTimeout(function () {
+                        errorPopup.style.display = 'none';
+                    }, 5000);
+                }
+            });
+        </script>
     </body>
 
 </html>

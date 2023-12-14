@@ -18,12 +18,13 @@ return new class extends Migration
             $table->string('description');
             $table->string('gender');
             $table->string('image');
+            $table->string('fee');
             $table->string('country');
             $table->string('city');
             $table->string('educationinfo');
             $table->string('additionalinfo');
             $table->string('specializeinfo');
-            $table->string('about');
+            $table->mediumText('about');
             $table->timestamps();
         });
     }
