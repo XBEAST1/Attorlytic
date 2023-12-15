@@ -49,7 +49,7 @@ body {
     background-color: #5a6268;
 }
 
-#firstname, #lastname, #country, #city {
+#firstname, #lastname, .country, #city {
     width: 24%;
 }
 
@@ -93,6 +93,11 @@ input, textarea {
     color: white;
     background-color: #393939;
     border: 1px solid #393939;
+}
+
+.country {
+    background-color: #393939;
+    color: white;
 }
 
 @media screen and (max-width: 450px) {

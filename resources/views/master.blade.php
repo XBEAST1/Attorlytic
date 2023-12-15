@@ -60,19 +60,8 @@
                     <li>
                         <a href="/practice-area">Practice Area</a>
                     </li>
-                    <li class=" menu-item-has-children ">
-                        <a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="/case">Case</a>
-                            </li>
-                            <li>
-                                <a href="/price-plan">Price Plan</a>
-                            </li>
-                            <li>
-                                <a href="/consulation">Consulation</a>
-                            </li>
-                        </ul>
+                    <li>
+                        <a href="/case">Case</a>
                     </li>
                     <li>
                         <a href="/appointment">Appointment</a>

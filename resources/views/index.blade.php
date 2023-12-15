@@ -655,88 +655,28 @@
                 <div class="col-lg-12">
                     <div class="our-attorney-carousel-wrapper">
                         <div class="our-attorney-carousel">
+                            @foreach ($lawyercards as $lawyercard)
                             <div class="single-our-attoryney-item">
                                 <div class="img-wrapper">
                                     <div class="bg-image"
-                                        style="background-image: url(assets/uploads/media-uploader/ab-61622624237.png);">
+                                        style="background-image: url(images/{{$lawyercard->image}});">
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <a href="/david-finch">
-                                        <h4 class="title">David Finch</h4>
+                                    <a href="{{ route ('booking', $lawyercard->id) }}">
+                                        <h4 class="title">{{$lawyercard->firstname}} {{$lawyercard->lastname}}</h4>
                                     </a>
-                                    <span class="designation">Assosiate, Attorlytic</span>
+                                    <span class="designation">{{$lawyercard->educationinfo}}</span>
                                     <span class="separator"></span>
-                                    <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>Tehran, Iran</span>
-                                    <p>Travelling salesman - and above it...</p>
+                                    <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>{{$lawyercard->city}}, {{$lawyercard->country}}</span>
+                                    <p>{{ Str::words($lawyercard->description, 6) }}</p>
                                     <div class="btn-wrapper my-3">
-                                        <a href="/david-finch"
+                                        <a href="{{ route ('booking', $lawyercard->id) }}"
                                             class="boxed-btn">Book Now</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="single-our-attoryney-item">
-                                <div class="img-wrapper">
-                                    <div class="bg-image"
-                                        style="background-image: url(assets/uploads/media-uploader/ab-51622624237.png);">
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <a href="/betty-doyle">
-                                        <h4 class="title">Betty Doyle</h4>
-                                    </a>
-                                    <span class="designation">Assosiate, Attorlytic</span>
-                                    <span class="separator"></span>
-                                    <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>Melborn,
-                                        Australia</span>
-                                    <p>Travelling salesman - and above it...</p>
-                                    <div class="btn-wrapper my-3">
-                                        <a href="/betty-doyle"
-                                            class="boxed-btn">Book Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-our-attoryney-item">
-                                <div class="img-wrapper">
-                                    <div class="bg-image"
-                                        style="background-image: url(assets/uploads/media-uploader/ab-41622624236.png);">
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <a href="/john-ierrante">
-                                        <h4 class="title">John Ierrante</h4>
-                                    </a>
-                                    <span class="designation">Director</span>
-                                    <span class="separator"></span>
-                                    <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>London,
-                                        England</span>
-                                    <p>Travelling salesman - and above it...</p>
-                                    <div class="btn-wrapper my-3">
-                                        <a href="/john-ierrante"
-                                            class="boxed-btn">Book Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-our-attoryney-item">
-                                <div class="img-wrapper">
-                                    <div class="bg-image"
-                                        style="background-image: url(assets/uploads/media-uploader/ab-31622624236.png);">
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <a href="/gregory-kaster">
-                                        <h4 class="title">Gregory Kaster</h4>
-                                    </a>
-                                    <span class="designation">Assosiate, Attorlytic</span>
-                                    <span class="separator"></span>
-                                    <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>New York</span>
-                                    <p>Travelling salesman - and above it...</p>
-                                    <div class="btn-wrapper my-3">
-                                        <a href="/gregory-kaster"
-                                            class="boxed-btn">Book Now</a>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

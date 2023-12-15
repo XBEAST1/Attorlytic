@@ -1238,7 +1238,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .breadcrumb-area .breadcrumb-inner {
-    padding: 140px 0 142px 0;
+    padding: 215px 0 142px 0;
 }
 
 .breadcrumb-area .page-title {
@@ -1640,13 +1640,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     height: 45px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 0 70px 0 15px;
-    width: 250px;
+    width: 100%;
 }
 
 .widget_search .search-form .submit-btn {
     position: absolute;
     right: 0;
     top: 0;
+    left: 290px;
     width: 60px;
     height: 45px;
     line-height: 40px;
@@ -7261,4 +7262,14 @@ button.submit-btn.gd-bg.pay-now {
 
 .fa-play {
     margin-top: 2rem!important;
+}
+
+#category {
+    width: 58%;
+}
+
+@media screen and (max-width: 450px) {
+    #category {
+        width: 100%;
+    }
 }

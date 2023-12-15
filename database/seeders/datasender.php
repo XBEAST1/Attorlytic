@@ -24,7 +24,7 @@ class datasender extends Seeder
                     "fee"=>"287",
                     "country"=>"Australia",
                     "city"=>"Sydney",
-                    "educationinfo"=>"Assosiate, Attorg",
+                    "educationinfo"=>"Assosiate, Attorlytic",
                     "additionalinfo"=>"Seniour Attorny",
                     "specializeinfo"=>"Family Law",
                     "about"=>"Education
@@ -60,7 +60,7 @@ class datasender extends Seeder
                     "fee"=>"350",
                     "country"=>"Ireland",
                     "city"=>"Auckland",
-                    "educationinfo"=>"Attorg",
+                    "educationinfo"=>"Attorlytic",
                     "additionalinfo"=>"Seniour Attorny",
                     "specializeinfo"=>"Family Law, Agricultural",
                     "about"=>"Education
@@ -96,7 +96,7 @@ class datasender extends Seeder
                     "fee"=>"235",
                     "country"=>"United States",
                     "city"=>"New York",
-                    "educationinfo"=>"Assosiate, Attorg",
+                    "educationinfo"=>"Assosiate, Attorlytic",
                     "additionalinfo"=>"Seniour Attorny",
                     "specializeinfo"=>"Family Law",
                     "about"=>"Education
@@ -132,7 +132,7 @@ class datasender extends Seeder
                     "fee"=>"380",
                     "country"=>"England",
                     "city"=>"London",
-                    "educationinfo"=>"Assosiate, Attorg",
+                    "educationinfo"=>"Assosiate, Attorlytic",
                     "additionalinfo"=>"Attorny",
                     "specializeinfo"=>"Family Law",
                     "about"=>"Education
@@ -168,7 +168,7 @@ class datasender extends Seeder
                     "fee"=>"287",
                     "country"=>"Australia",
                     "city"=>"Melborn",
-                    "educationinfo"=>"Assosiate, Attorg",
+                    "educationinfo"=>"Assosiate, Attorlytic",
                     "additionalinfo"=>"Seniour Attorny",
                     "specializeinfo"=>"Family Law",
                     "about"=>"Education
@@ -204,7 +204,7 @@ class datasender extends Seeder
                     "fee"=>"400",
                     "country"=>"Iran",
                     "city"=>"Tehran",
-                    "educationinfo"=>"Assosiate, Attorg",
+                    "educationinfo"=>"Assosiate, Attorlytic",
                     "additionalinfo"=>"Seniour Attorny",
                     "specializeinfo"=>"Family Law",
                     "about"=>"Education

@@ -6,7 +6,7 @@
 <title>Attorlytic Login Form</title>
 <style>
     .margin {
-        margin-top: 11rem !important;
+        margin-top: 11rem;
     }
 </style>
 <nav class="navbar navbar-area navbar-expand-lg nav-style-01 fixed-top">

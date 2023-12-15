@@ -246,15 +246,23 @@ select:focus {
     background-position: center;
     background-size: cover;
   }
-  
+
+  .margin {
+    margin-top: 26vh;
+  }
+
   .item {
     margin-left: 15px;
+  }
+
+  .wrapper {
+    width: 80vw;
   }
 
   .xwrapper {
     width: 80vw;
   }
-  
+
   .horizontal-container {
     flex-direction: column;
   }

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Bookingcontroller;
 use App\Http\Controllers\Formcontroller;
+use App\Http\Controllers\Fetchcontroller;
 use App\Http\Controllers\Routecontroller;
 use App\Http\Controllers\MultiUserAuthController;
 use App\Http\Controllers\ProfileController;
@@ -19,14 +21,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(Routecontroller::class)->group(function(){
     Route::get('/', 'index');
-    Route::get('/appointment', 'appointment');
     Route::get('/blog', 'blog');
     Route::get('/case', 'case');
-    Route::get('/about-us', 'aboutus');
-    Route::get('/consulation', 'consulation');
     Route::get('/contact-us', 'contactus');
     Route::get('/practice-area', 'practicearea');
-    Route::get('/price-plan', 'priceplan');
     Route::get('/business-law', 'businesslaw');
     Route::get('/family-law', 'familylaw');
     Route::get('/criminal-law', 'criminallaw');
@@ -49,19 +47,26 @@ Route::controller(Routecontroller::class)->group(function(){
     Route::get('/allow-miles', 'allowmiles');
     Route::get('/to-sitting-subject', 'tosittingsubject');
     Route::get('/fancy-she-stuff', 'fancyshestuff');
-    Route::get('/betty-doyle', 'bettydoyle');
-    Route::get('/john-ierrante', 'johnierrante');
-    Route::get('/rene-raniels', 'reneraniels');
-    Route::get('/david-finch', 'davidfinch');
-    Route::get('/ruth-christian', 'ruthchristian');
-    Route::get('/gregory-kaster', 'gregorykaster');
 });
 
+Route::get('/booking/{id}', [Bookingcontroller::class, 'booking'])->name('booking');
+
 Route::get('/home', [MultiUserAuthController::class, 'index'])->middleware('auth')->name('home');
+
+
+Route::controller(Fetchcontroller::class)->group(function(){
+    Route::get('/', 'indexlawyercards');
+    Route::get('/about-us', 'aboutlawyercards');
+    Route::get('/appointment', 'appointmentlawyercards');
+});
+
+
+
 
 Route::middleware('admin')->group(function () {
     Route::get('/updateprofile', [Routecontroller::class, 'updateprofile']);
     Route::post('/home', [Formcontroller::class, 'store_data']);
+    Route::get('/delete/{id}', [Formcontroller::class, 'deleteprofile'])->name('deleteprofile');
 });
 
 

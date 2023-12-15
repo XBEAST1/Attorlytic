@@ -6,7 +6,13 @@
 <title>Attorlytic Register Form</title>
 <style>
     .margin {
-        margin-top: 9rem !important;
+        margin-top: 9rem;
+    }
+
+    @media screen and (max-width: 450px) {
+        .margin {
+            margin-top: 26vh;
+        }
     }
 </style>
 <nav class="navbar navbar-area navbar-expand-lg nav-style-01 fixed-top">

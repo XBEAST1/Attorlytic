@@ -7,10 +7,6 @@ use Illuminate\Support\Facades\Auth;
 
 class Routecontroller extends Controller
 {
-    public function index()
-    {
-        return view ('index');
-    }
     public function appointment(){
         return view('appointment');
     }
@@ -19,9 +15,6 @@ class Routecontroller extends Controller
     }
     public function case(){
         return view('case');
-    }
-    public function aboutus(){
-        return view('about-us');
     }
     public function consulation(){
         return view('consulation');
@@ -100,24 +93,6 @@ class Routecontroller extends Controller
     }
     public function fancyshestuff(){
         return view('fancy-she-stuff');
-    }
-    public function bettydoyle(){
-        return view('betty-doyle');
-    }
-    public function johnierrante(){
-        return view('john-ierrante');
-    }
-    public function reneraniels(){
-        return view('rene-raniels');
-    }
-    public function davidfinch(){
-        return view('david-finch');
-    }
-    public function ruthchristian(){
-        return view('ruth-christian');
-    }
-    public function gregorykaster(){
-        return view('gregory-kaster');
     }
     public function updateprofile(){
         return view('admin.update');
