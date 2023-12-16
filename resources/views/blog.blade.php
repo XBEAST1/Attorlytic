@@ -94,17 +94,6 @@
                 <div class="col-lg-4">
                     <div class="widget-area">
                         <div class="widgets-area">
-                            <div class=" blog-widget widget">
-                                <div class="widget widget_search">
-                                    <form action="blog/search" method="get" class="search-form">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="search"
-                                                placeholder="Write your keyword...">
-                                        </div>
-                                        <button class="submit-btn" type="submit"><i class="fa fa-search"></i></button>
-                                    </form>
-                                </div>
-                            </div>
                             <div class="widget_archive blog-widget widget">
                                 <div class="widget widget_archive style-01">
                                     <h3 class="widget-title style-01">Categories</h3>

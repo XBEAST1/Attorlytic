@@ -74,7 +74,7 @@
                     <label for="category">Category</label>
                     <br>
                     <select class="mt-3 rounded-5 p-2 category" name="category">
-                        <option value="Real State">Real State</option>
+                        <option value="RealState">Real State</option>
                         <option value="Personal">Personal</option>
                         <option value="Criminal">Criminal</option>
                         <option value="Business">Business</option>

@@ -11,9 +11,10 @@
     <link rel="icon" href="{{ asset('assets/uploads/media-uploader/favicon.png') }}" type="image/png">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap"
         rel="stylesheet">
-    
+
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap.min4.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/magnific-popup.css') }}">
@@ -25,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}">
     <script src="{{ asset('assets/common/js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('assets/common/js/jquery-migrate-3.3.2.min.js') }}"></script>
-    
+
 
     <style>
         :root {
@@ -140,7 +141,8 @@
                                 <span class="designation">{{ $booking->educationinfo }}</span>
                                 <h2 class="title">{{ $booking->firstname }} {{ $booking->lastname }}</h2>
                                 <div class="short-description">{{ $booking->description }}</div>
-                                <div class="location"><i class="fas fa-map-marked-alt"></i> {{$booking->city}}, {{$booking->country}}</div>
+                                <div class="location"><i class="fas fa-map-marked-alt"></i> {{$booking->city}},
+                                    {{$booking->country}}</div>
                                 <div class="price-wrap">
                                     <h4 class="price">Fee: <span>${{ $booking->fee }}</span></h4>
                                 </div>
@@ -240,6 +242,56 @@
                                                                     href="#nav-profile" role="tab"
                                                                     aria-controls="nav-profile" aria-selected="false"><i
                                                                         class="fas fa-address-book"></i></a>
+                                                            </div>
+                                                            <div class="tab-content">
+                                                                <div class="tab-pane fade show active" id="nav-home"
+                                                                    role="tabpanel">
+                                                                    <div class="login-form">
+                                                                        <form class="contact-page-form style-01"
+                                                                            method="POST" action="{{ route('login') }}">
+                                                                            @csrf
+                                                                            <div class="form-group">
+                                                                                <input class="form-control"
+                                                                                    placeholder="Username" input
+                                                                                    type="text" required id="email"
+                                                                                    type="email" name="email"
+                                                                                    :value="old('email')" required
+                                                                                    autofocus autocomplete="username">
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <input class="form-control"
+                                                                                    placeholder="Password" required
+                                                                                    id="password" type="password"
+                                                                                    name="password" required
+                                                                                    autocomplete="current-password">
+                                                                            </div>
+                                                                            <div class="form-group btn-wrapper">
+                                                                                <button
+                                                                                    class="boxed-btn btn-saas btn-block"
+                                                                                    id="login_btn"
+                                                                                    type="submit">Login</button>
+                                                                            </div>
+                                                                            <div class="row mb-4 rmber-area">
+                                                                                <div class="col-6">
+                                                                                    <div
+                                                                                        class="custom-control custom-checkbox ">
+                                                                                        <input type="checkbox"
+                                                                                            id="remember_me"
+                                                                                            type="checkbox"
+                                                                                            name="remember"
+                                                                                            class="custom-control-input"
+                                                                                            id="remember">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-6 text-right">
+                                                                                    <a class="d-block"
+                                                                                        href="register">Create new
+                                                                                        account?</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </nav>
                                                     </div>
@@ -394,7 +446,8 @@
             </div>
         </div>
     </div>
-    <script data-cfasync="false" src="{{ asset('/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script>
+    <script data-cfasync="false"
+        src="{{ asset('/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/common/js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('assets/common/js/jquery-migrate-3.3.2.min.js') }}"></script>
@@ -407,89 +460,89 @@
     <script src="{{ asset('assets/frontend/js/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/dynamic-script.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/frontend/js/main.js') }}"></script>    
+    <script src="{{ asset('assets/frontend/js/main.js') }}"></script>
     <script>
-            (function ($) {
-                "use strict";
-                $(document).on('change', '#guest_logout', function (e) {
-                    e.preventDefault();
-                    var infoTab = $('#nav-profile-tab');
-                    var nextBtn = $('.next-step-btn');
-                    if ($(this).is(':checked')) {
-                        $('.booking-wrap .login-form').hide();
-                        infoTab.attr('disabled', false).removeClass('disabled');
-                        nextBtn.show();
+        (function ($) {
+            "use strict";
+            $(document).on('change', '#guest_logout', function (e) {
+                e.preventDefault();
+                var infoTab = $('#nav-profile-tab');
+                var nextBtn = $('.next-step-btn');
+                if ($(this).is(':checked')) {
+                    $('.booking-wrap .login-form').hide();
+                    infoTab.attr('disabled', false).removeClass('disabled');
+                    nextBtn.show();
 
-                    } else {
-                        $('.login-form').show();
-                        infoTab.attr('disabled', true).addClass('disabled');
-                        nextBtn.hide();
+                } else {
+                    $('.login-form').show();
+                    infoTab.attr('disabled', true).addClass('disabled');
+                    nextBtn.hide();
+                }
+            });
+            $(document).on('click', '.next-step-btn', function (e) {
+                var infoTab = $('#nav-profile-tab');
+                infoTab.attr('disabled', false).removeClass('disabled').addClass('active').siblings().removeClass('active');
+                $('#nav-profile').addClass('show active').siblings().removeClass('show active');
+            });
+            $(document).on('click', '.payment-gateway-wrapper > ul > li', function (e) {
+                e.preventDefault();
+                var gateway = $(this).data('gateway');
+                var manual_gateway_tr = $('.manual_payment_transaction_field');
+                $(this).addClass('selected').siblings().removeClass('selected');
+                $('input[name="selected_payment_gateway"]').val(gateway);
+                if (gateway === 'manual_payment') {
+                    manual_gateway_tr.show();
+                } else {
+                    manual_gateway_tr.hide();
+                }
+            });
+            $(document).on('click', '.time-slot.date li', function (e) {
+                e.preventDefault();
+                var date = $(this).data('date');
+                date = date.split('-');
+                var showDate = new Date(date[2] + '-' + date[1] + '-' + date[0]);
+                $('.time_slog_date').text(showDate.toDateString());
+                $(this).toggleClass('selected').siblings().removeClass('selected');
+                $('input[name="booking_date"]').val($(this).data('date'));
+            });
+            $(document).on('click', '.time-slot.time li', function (e) {
+                e.preventDefault();
+                $(this).toggleClass('selected').siblings().removeClass('selected');
+                $('input[name="booking_time_id"]').val($(this).data('id'));
+            });
+            $(document).on('click', '#appointment_ratings', function (e) {
+                e.preventDefault();
+                var myForm = document.getElementById('appointment_rating_form');
+                var formData = new FormData(myForm);
+
+                $.ajax({
+                    type: "POST",
+                    url: "appointment-review",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    beforeSend: function () {
+                        $('#appointment_ratings').children('i').removeClass('d-none');
+                    },
+                    success: function (data) {
+                        var errMsgContainer = $('#appointment_rating_form').find('.error-message');
+                        $('#appointment_ratings').children('i').addClass('d-none');
+                        errMsgContainer.html('');
+                        errMsgContainer.append('<div class="alert alert-' + data.type + '">' + data.msg + '</div>');
+
+                    },
+                    error: function (data) {
+                        var error = data.responseJSON;
+                        var errMsgContainer = $('#appointment_rating_form').find('.error-message');
+                        errMsgContainer.html('');
+                        $.each(error.errors, function (index, value) {
+                            errMsgContainer.append('<div class="alert alert-danger">' + value + '</div>');
+                        });
+                        $('#appointment_ratings').children('i').addClass('d-none');
                     }
                 });
-                $(document).on('click', '.next-step-btn', function (e) {
-                    var infoTab = $('#nav-profile-tab');
-                    infoTab.attr('disabled', false).removeClass('disabled').addClass('active').siblings().removeClass('active');
-                    $('#nav-profile').addClass('show active').siblings().removeClass('show active');
-                });
-                $(document).on('click', '.payment-gateway-wrapper > ul > li', function (e) {
-                    e.preventDefault();
-                    var gateway = $(this).data('gateway');
-                    var manual_gateway_tr = $('.manual_payment_transaction_field');
-                    $(this).addClass('selected').siblings().removeClass('selected');
-                    $('input[name="selected_payment_gateway"]').val(gateway);
-                    if (gateway === 'manual_payment') {
-                        manual_gateway_tr.show();
-                    } else {
-                        manual_gateway_tr.hide();
-                    }
-                });
-                $(document).on('click', '.time-slot.date li', function (e) {
-                    e.preventDefault();
-                    var date = $(this).data('date');
-                    date = date.split('-');
-                    var showDate = new Date(date[2] + '-' + date[1] + '-' + date[0]);
-                    $('.time_slog_date').text(showDate.toDateString());
-                    $(this).toggleClass('selected').siblings().removeClass('selected');
-                    $('input[name="booking_date"]').val($(this).data('date'));
-                });
-                $(document).on('click', '.time-slot.time li', function (e) {
-                    e.preventDefault();
-                    $(this).toggleClass('selected').siblings().removeClass('selected');
-                    $('input[name="booking_time_id"]').val($(this).data('id'));
-                });
-                $(document).on('click', '#appointment_ratings', function (e) {
-                    e.preventDefault();
-                    var myForm = document.getElementById('appointment_rating_form');
-                    var formData = new FormData(myForm);
-
-                    $.ajax({
-                        type: "POST",
-                        url: "appointment-review",
-                        data: formData,
-                        processData: false,
-                        contentType: false,
-                        beforeSend: function () {
-                            $('#appointment_ratings').children('i').removeClass('d-none');
-                        },
-                        success: function (data) {
-                            var errMsgContainer = $('#appointment_rating_form').find('.error-message');
-                            $('#appointment_ratings').children('i').addClass('d-none');
-                            errMsgContainer.html('');
-                            errMsgContainer.append('<div class="alert alert-' + data.type + '">' + data.msg + '</div>');
-
-                        },
-                        error: function (data) {
-                            var error = data.responseJSON;
-                            var errMsgContainer = $('#appointment_rating_form').find('.error-message');
-                            errMsgContainer.html('');
-                            $.each(error.errors, function (index, value) {
-                                errMsgContainer.append('<div class="alert alert-danger">' + value + '</div>');
-                            });
-                            $('#appointment_ratings').children('i').addClass('d-none');
-                        }
-                    });
-                });
-            })(jQuery);
+            });
+        })(jQuery);
     </script>
 
 

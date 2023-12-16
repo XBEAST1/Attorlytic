@@ -57,10 +57,9 @@ Route::get('/home', [MultiUserAuthController::class, 'index'])->middleware('auth
 Route::controller(Fetchcontroller::class)->group(function(){
     Route::get('/', 'indexlawyercards');
     Route::get('/about-us', 'aboutlawyercards');
-    Route::get('/appointment', 'appointmentlawyercards');
+    Route::get('/appointment', 'appointmentlawyercards')->name('appointment');
+    Route::get('/search', 'search')->name('search');
 });
-
-
 
 
 Route::middleware('admin')->group(function () {

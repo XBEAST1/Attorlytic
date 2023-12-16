@@ -25,22 +25,20 @@
                 <div class="widget-area">
                     <div class="widget_search">
                         <select name="category" id="category" class="form-control" style="height:45px;">
-                            <option>select category</option>
-                            <option>Real State</option>
-                            <option>Personal</option>
-                            <option>Criminal</option>
-                            <option>Business</option>
+                            <option value="select category">Select Category</option>
+                            <option value="Real State">Real State</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Criminal">Criminal</option>
+                            <option value="Business">Business</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="widget_search appointment-search">
-                    <form method="get" class="search-form">
-                        <input type="hidden" name="cat" value>
-                        <input type="hidden" name="sort" value>
+                    <form method="get" action="{{ route('search') }}" class="search-form">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" name="search" class="form-control" placeholder="Search">
                         </div>
                         <button class="submit-btn" type="submit"><i class="fa fa-search"></i></button>
                     </form>
@@ -49,11 +47,10 @@
         </div>
         <div class="row mt-5">
             @foreach ($lawyercards as $lawyercard)
-            <div class="col-lg-6">
+            <div class="col-lg-6 lawyer-card {{$lawyercard->category}}">
                 <div class="single-our-attoryney-item margin-bottom-30">
                     <div class="img-wrapper">
-                        <div class="bg-image"
-                            style="background-image: url(images/{{$lawyercard->image}});">
+                        <div class="bg-image" style="background-image: url(images/{{$lawyercard->image}});">
                         </div>
                     </div>
                     <div class="content">
@@ -62,7 +59,8 @@
                         </a>
                         <span class="designation">{{$lawyercard->educationinfo}}</span>
                         <span class="separator"></span>
-                        <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>{{$lawyercard->city}}, {{$lawyercard->country}}</span>
+                        <span class="location"><i class="fas fa-map-marker-alt mx-2"></i>{{$lawyercard->city}},
+                            {{$lawyercard->country}}</span>
                         <p>{{ Str::words($lawyercard->description, 6) }}</p>
                         <div class="btn-wrapper my-3">
                             <a href="{{ route ('booking', $lawyercard->id) }}" class="boxed-btn">Book Now</a>
@@ -78,7 +76,22 @@
         </div>
     </div>
 </div>
+<script src="assets/common/js/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#category').change(function () {
+            var selectedCategory = $(this).val();
+            $('.lawyer-card').hide();
 
+            if (selectedCategory === 'select category') {
+                $('.lawyer-card').show();
+            } else {
+                var formattedCategory = selectedCategory.split(' ').join('');
+                $('.' + formattedCategory).show();
+            }
+        });
+    });
+</script>
 </body>
 
 </html>

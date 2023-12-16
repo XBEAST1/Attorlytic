@@ -25,9 +25,6 @@ class Routecontroller extends Controller
     public function practicearea(){
         return view('practice-area');
     }
-    public function priceplan(){
-        return view('price-plan');
-    }
     public function businesslaw(){
         return view('business-law');
     }
@@ -72,15 +69,6 @@ class Routecontroller extends Controller
     }
     public function categorydisputeresoulation(){
         return view('category-dispute-resoulation');
-    }
-    public function priceplanpersonal(){
-        return view('price-plan-personal');
-    }
-    public function priceplanprofessional(){
-        return view('price-plan-professional');
-    }
-    public function priceplanenterprise(){
-        return view('price-plan-enterprise');
     }
     public function raiseyourvoice(){
         return view('raise-your-voice');

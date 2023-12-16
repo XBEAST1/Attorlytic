@@ -7273,21 +7273,3 @@ button.submit-btn.gd-bg.pay-now {
         width: 100%;
     }
 }
-
-/* Add this CSS to your existing styles or in a separate style tag */
-.widget_search select option a {
-    text-decoration: none;
-    color: #333;
-}
-
-.widget_search select option.active a {
-    color: #ff5722; /* Change the color to your preferred active state color */
-}
-
-.page-content .row > div {
-    display: none;
-}
-
-.page-content .row > div:target {
-    display: block;
-}
