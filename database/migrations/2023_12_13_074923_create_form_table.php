@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('gender');
             $table->string('image');
             $table->string('fee');
+            $table->string('category');
             $table->string('country');
             $table->string('city');
             $table->string('educationinfo');

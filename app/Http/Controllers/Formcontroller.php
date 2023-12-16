@@ -14,9 +14,10 @@ class Formcontroller extends Controller
             'firstname' => 'required',
             'lastname' => 'required',
             'description' => 'required',
-            'gender' => 'required|in:male,female',
+            'gender' => 'required|in:Male,Female',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'fee' => 'required|numeric',
+            'category' => 'required',
             'country' => 'required',
             'city' => 'required',
             'educationinfo' => 'required',
@@ -36,6 +37,7 @@ class Formcontroller extends Controller
         $data->description = $request->input('description');
         $data->gender = $request->input('gender');
         $data->fee = $request->input('fee');
+        $data->category = $request->input('category');
         $data->country = $request->input('country');
         $data->city = $request->input('city');
         $data->educationinfo = $request->input('educationinfo');
