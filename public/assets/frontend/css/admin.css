@@ -31,8 +31,10 @@ body {
     color: white;
 }
 
+#dashboard,
+#add-profile,
 #update-profile,
-#add-profile {
+#delete-profile {
     width: 70%;
     color: white;
     text-decoration: none;
@@ -44,8 +46,10 @@ body {
     transition: background-color 0.3s;
 }
 
+#dashboard:hover,
+#add-profile:hover,
 #update-profile:hover,
-#add-profile:hover {
+#delete-profile:hover {
     background-color: #5a6268;
 }
 

@@ -29,7 +29,7 @@
                     <div class="col-lg-7">
                         <div class="header-inner">
 
-                            <h1 class="title">Dont Feel Helpless We Fight for Justice</h1>
+                            <h1 class="title">Don't Feel Helpless We Fight for Justice</h1>
                             <p>Bore tall nay many many time yet less. Doubtful for answered one fat indulged margaret
                                 sir shutters together. Ladies so in wholly around whence in at. Warmth he up giving
                                 oppose if.</p>

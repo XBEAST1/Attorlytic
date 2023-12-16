@@ -49,10 +49,7 @@ Route::controller(Routecontroller::class)->group(function(){
     Route::get('/fancy-she-stuff', 'fancyshestuff');
 });
 
-Route::get('/booking/{id}', [Bookingcontroller::class, 'booking'])->name('booking');
-
 Route::get('/home', [MultiUserAuthController::class, 'index'])->middleware('auth')->name('home');
-
 
 Route::controller(Fetchcontroller::class)->group(function(){
     Route::get('/', 'indexlawyercards');
@@ -61,13 +58,16 @@ Route::controller(Fetchcontroller::class)->group(function(){
     Route::get('/search', 'search')->name('search');
 });
 
+Route::get('/booking/{id}', [Bookingcontroller::class, 'booking'])->name('booking');
 
 Route::middleware('admin')->group(function () {
+    Route::get('/addprofile', [Routecontroller::class, 'addprofile']);
+    Route::post('/addprofile', [Formcontroller::class, 'store_data']);
     Route::get('/updateprofile', [Routecontroller::class, 'updateprofile']);
-    Route::post('/home', [Formcontroller::class, 'store_data']);
-    Route::get('/delete/{id}', [Formcontroller::class, 'deleteprofile'])->name('deleteprofile');
+    Route::post('/updateprofile', [Formcontroller::class, 'updateprofile']);
+    Route::get('/deleteprofile', [Routecontroller::class, 'deleteprofile']);
+    Route::post('/deleteprofile', [Formcontroller::class, 'deleteprofile']);
 });
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -57,9 +57,9 @@ class Formcontroller extends Controller
 
         return redirect()->back()->with('status', 'success')->with('message', 'Data submitted successfully!');
     }
-
-    function deleteprofile($id){
-        FormData::destroy($id);
-        return view('index');
-    }
+    
+    // function deleteprofile($id){
+    //     FormData::destroy($id);
+    //     return view('index');
+    // }
 }

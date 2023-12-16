@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\datasend;
+use App\Models\profiledatasend;
 
-class datasender extends Seeder
+class profiledatasender extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,6 +16,7 @@ class datasender extends Seeder
         $lawyers=collect(
             [
                 [
+                    'user_id' => 1,
                     "firstname"=>"Rene",
                     "lastname"=>"Raniels",
                     "description"=>"
@@ -54,6 +55,7 @@ class datasender extends Seeder
                     "image"=>"100000.png",
                 ],
                 [
+                    'user_id' => 2,
                     "firstname"=>"Ruth",
                     "lastname"=>"Christian",
                     "description"=>"Travelling salesman - and above it there hung a picture that he had. Recently cut out of an illustrated magazine and housed in a nice It showed a lady fitted out with a fur hat and fur boa who sat",
@@ -91,6 +93,7 @@ class datasender extends Seeder
                     "image"=>"200000.png",
                 ],
                 [
+                    'user_id' => 3,
                     "firstname"=>"Gregory",
                     "lastname"=>"Kaster",
                     "description"=>"Travelling salesman - and above it there hung a picture that he had. Recently cut out of an illustrated magazine and housed in a nice It showed a lady fitted out with a fur hat and fur boa who sat",
@@ -128,14 +131,15 @@ class datasender extends Seeder
                     "image"=>"300000.png",
                 ],
                 [
+                    'user_id' => 4,
                     "firstname"=>"John",
                     "lastname"=>"Ierrante",
                     "description"=>"Travelling salesman - and above it there hung a picture that he had. Recently cut out of an illustrated magazine and housed in a nice It showed a lady fitted out with a fur hat and fur boa who sat",
                     "gender"=>"Male",
                     "fee"=>"380",
                     "category"=>"Personal",
-                    "country"=>"England",
-                    "city"=>"London",
+                    "country"=>"London",
+                    "city"=>"England",
                     "educationinfo"=>"Assosiate, Attorlytic",
                     "additionalinfo"=>"Attorny",
                     "specializeinfo"=>"Family Law",
@@ -165,6 +169,7 @@ class datasender extends Seeder
                     "image"=>"400000.png",
                 ],
                 [
+                    'user_id' => 5,
                     "firstname"=>"Betty",
                     "lastname"=>"Doyle",
                     "description"=>"Travelling salesman - and above it there hung a picture that he had. Recently cut out of an illustrated magazine and housed in a nice It showed a lady fitted out with a fur hat and fur boa who sat",
@@ -202,6 +207,7 @@ class datasender extends Seeder
                     "image"=>"500000.png",
                 ],
                 [
+                    'user_id' => 6,
                     "firstname"=>"David",
                     "lastname"=>"Finch",
                     "description"=>"Travelling salesman - and above it there hung a picture that he had. Recently cut out of an illustrated magazine and housed in a nice It showed a lady fitted out with a fur hat and fur boa who sat",
@@ -241,7 +247,7 @@ class datasender extends Seeder
             ]
         );
         $lawyers->each(function($lawyers){
-            datasend::insert($lawyers);
+            profiledatasend::insert($lawyers);
         });
     }
 }

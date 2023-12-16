@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\datasend;
 
 class MultiUserAuthController extends Controller
 {
@@ -12,9 +13,10 @@ class MultiUserAuthController extends Controller
         if (Auth::id()){
             $usertype = Auth()->user()->usertype;
             if ($usertype == 'user'){
-                return view('index');
+                $lawyercards = datasend::all();
+                return view('index', compact('lawyercards'));
             } else if ($usertype == 'admin'){
-                return view('admin.admin');
+                return view('admin.dashboard');
             }
         }
     }

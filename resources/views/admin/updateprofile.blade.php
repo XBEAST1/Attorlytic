@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Profile</title>
+    <title>Update Profile</title>
+    <link rel="icon" href="assets/uploads/media-uploader/favicon.png" type="image/png">
     <link rel="stylesheet" href="assets/frontend/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/frontend/css/admin.css">
 </head>
@@ -19,8 +20,10 @@
             </a>
             <h2 id="admin-heading">Admin Panel</h2>
             <div class="side-pages mt-5">
-                <a href="home" id="add-profile">Add Profile</a>
+                <a href="home" id="dashboard">Dashboard</a>
+                <a href="addprofile" id="add-profile">Add Profile</a>
                 <a href="updateprofile" id="update-profile">Update Profile</a>
+                <a href="deleteprofile" id="delete-profile">Delete Profile</a>
             </div>
         </div>
         <div id="content">
@@ -39,18 +42,21 @@
             </div>
             @endif
             <br>
-            <form action="home" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+            <form action="addprofile" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
                 @csrf
                 <div class="form-group">
                     <label for="username">First Name</label>
-                    <label class="lastname" for="last name">Last Name</label> <br>
-                    <input class="mt-2 rounded-5 p-2" type="text" class="form-control" name="firstname" id="firstname">
-                    <input class="rounded-5 p-2 ms-3" type="text" class="form-control" name="lastname" id="lastname">
+                    <label class="lastname" for="lastname">Last Name</label> <br>
+                    <input class="mt-2 rounded-5 p-2" type="text" value="{{ $profiledata->firstname }}"
+                        class="form-control" name="firstname" id="firstname">
+                    <input class="rounded-5 p-2 ms-3" type="text" value="{{ $profiledata->lastname }}"
+                        class="form-control" name="lastname" id="lastname">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="description">Description</label> <br>
-                    <textarea class="mt-2 rounded-5 p-2" name="description" id="description" rows="5"></textarea>
+                    <textarea class="mt-2 rounded-5 p-2" name="description" id="description"
+                        rows="5">{{ $profiledata->description }}</textarea>
                 </div>
                 <br>
                 <h5>Gender</h5>
@@ -83,7 +89,8 @@
                 <br>
                 <div class="form-group">
                     <label for="fee">Fee</label> <br>
-                    <input class="mt-2 rounded-5 p-2" name="fee" type="text" class="form-control" id="fee">
+                    <input class="mt-2 rounded-5 p-2" value="{{ $profiledata->fee }}" name="fee" type="text"
+                        class="form-control" id="fee">
                 </div>
                 <br>
                 <div class="form-group">
@@ -141,8 +148,7 @@
                         <option value="Colombia">Colombia</option>
                         <option value="Comoros">Comoros</option>
                         <option value="Congo">Congo</option>
-                        <option value="Congo, the Democratic Republic of the">Congo, the Democratic Republic of the
-                        </option>
+                        <option value="Congo, the Democratic Republic of the">Congo, the Democratic Republic of the</option>
                         <option value="Cook Islands">Cook Islands</option>
                         <option value="Costa Rica">Costa Rica</option>
                         <option value="Cote d'Ivoire">Cote d'Ivoire</option>
@@ -206,13 +212,13 @@
                         <option value="Kazakhstan">Kazakhstan</option>
                         <option value="Kenya">Kenya</option>
                         <option value="Kiribati">Kiribati</option>
-                        <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of
-                        </option>
+                        <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
                         <option value="Korea, Republic of">Korea, Republic of</option>
                         <option value="Kuwait">Kuwait</option>
                         <option value="Kyrgyzstan">Kyrgyzstan</option>
                         <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
                         <option value="Latvia">Latvia</option>
+                        <option value="London">London</option>
                         <option value="Lebanon">Lebanon</option>
                         <option value="Lesotho">Lesotho</option>
                         <option value="Liberia">Liberia</option>
@@ -221,8 +227,7 @@
                         <option value="Lithuania">Lithuania</option>
                         <option value="Luxembourg">Luxembourg</option>
                         <option value="Macau">Macau</option>
-                        <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav
-                            Republic of</option>
+                        <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
                         <option value="Madagascar">Madagascar</option>
                         <option value="Malawi">Malawi</option>
                         <option value="Malaysia">Malaysia</option>
@@ -290,8 +295,7 @@
                         <option value="Solomon Islands">Solomon Islands</option>
                         <option value="Somalia">Somalia</option>
                         <option value="South Africa">South Africa</option>
-                        <option value="South Georgia and the South Sandwich Islands">South Georgia and the South
-                            Sandwich Islands</option>
+                        <option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
                         <option value="Spain">Spain</option>
                         <option value="Sri Lanka">Sri Lanka</option>
                         <option value="St. Helena">St. Helena</option>
@@ -321,8 +325,7 @@
                         <option value="United Arab Emirates">United Arab Emirates</option>
                         <option value="United Kingdom">United Kingdom</option>
                         <option value="United States">United States</option>
-                        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands
-                        </option>
+                        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
                         <option value="Uruguay">Uruguay</option>
                         <option value="Uzbekistan">Uzbekistan</option>
                         <option value="Vanuatu">Vanuatu</option>
@@ -337,24 +340,28 @@
                         <option value="Zambia">Zambia</option>
                         <option value="Zimbabwe">Zimbabwe</option>
                     </select>
-                    <input class="mt-2 rounded-5 p-2 ms-3" name="city" type="text" class="form-control" id="city">
+                    <input class="mt-2 rounded-5 p-2 ms-3" value="{{ $profiledata->city }}" name="city" type="text"
+                        class="form-control" id="city">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="education-info">Education Info</label>
                     <label class="additional-info" for="additional-info">Additional Info</label>
                     <label class="specialize-info" for="specialize-info">Specialize Info</label> <br>
-                    <input class="mt-2 rounded-5 p-2" name="educationinfo" type="text" class="form-control"
-                        id="education-info">
-                    <input class="mt-2 rounded-5 p-2 ms-2" name="additionalinfo" type="text" class="form-control"
+                    <input class="mt-2 rounded-5 p-2" name="educationinfo" value="{{ $profiledata->educationinfo }}"
+                        type="text" class="form-control" id="education-info">
+                    <input class="mt-2 rounded-5 p-2 ms-2" name="additionalinfo"
+                        value="{{ $profiledata->additionalinfo }}" type="text" class="form-control"
                         id="additional-info">
-                    <input class="mt-2 rounded-5 p-2 ms-2" name="specializeinfo" type="text" class="form-control"
+                    <input class="mt-2 rounded-5 p-2 ms-2" name="specializeinfo"
+                        value="{{ $profiledata->specializeinfo }}" type="text" class="form-control"
                         id="specialize-info">
                 </div>
                 <br>
                 <div class="form-group">
-                    <label for="about">About</label> <br>
-                    <textarea class="mt-2 rounded-5 p-2" name="about" id="about" rows="10"></textarea>
+                    <label for="about">About</label><br>
+                    <textarea class="mt-2 rounded-5 p-2" name="about" id="about"
+                        rows="10">{{ $profiledata->about }}</textarea>
                 </div>
                 <br>
                 <br>
@@ -362,6 +369,41 @@
             </form>
         </div>
         <script src="assets/frontend/js/bootstrap.bundle.min.js"></script>
+        <script>
+            (function () {
+                var genderValue = '{{ $profiledata->gender }}';
+        
+                if (genderValue === 'Male') {
+                    document.getElementById('male').checked = true;
+                } else if (genderValue === 'Female') {
+                    document.getElementById('female').checked = true;
+                }
+            })();
+        </script>        
+        <script>
+            (function () {
+                var select = document.querySelector('.category');
+                var defaultValue = '{{ $profiledata->category }}';
+                for (var i = 0; i < select.options.length; i++) {
+                    if (select.options[i].value === defaultValue) {
+                        select.options[i].selected = true;
+                        break;
+                    }
+                }
+            })();
+        </script>
+        <script>
+            (function () {
+                var select = document.querySelector('.country');
+                var defaultValue = '{{ $profiledata->country }}';
+                for (var i = 0; i < select.options.length; i++) {
+                    if (select.options[i].value === defaultValue) {
+                        select.options[i].selected = true;
+                        break;
+                    }
+                }
+            })();
+        </script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 var successPopup = document.getElementById('success-popup');

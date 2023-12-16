@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\profiledatasend;
 
 class Routecontroller extends Controller
 {
@@ -82,7 +83,16 @@ class Routecontroller extends Controller
     public function fancyshestuff(){
         return view('fancy-she-stuff');
     }
-    public function updateprofile(){
-        return view('admin.update');
+    public function addprofile(){
+        return view('admin.addprofile');
+    }
+    public function updateprofile() {
+        $user_id = Auth::user()->id;
+        $profiledata = profiledatasend::find($user_id);
+        return view('admin.updateprofile', compact('profiledata','user_id'));
+    }
+    public function deleteprofile(){
+        $user_id = Auth::user()->id;
+        return view ('admin.deleteprofile', compact('user_id'));
     }
 }
