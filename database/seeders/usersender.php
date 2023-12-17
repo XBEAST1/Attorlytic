@@ -17,37 +17,37 @@ class usersender extends Seeder
         $lawyers = collect(
             [
                 [
-                    "name" => "reneraniels",
+                    "name" => "Rene Raniels",
                     "email" => "reneraniels@gmail.com",
                     "password" => Hash::make("reneraniels@gmail.com"),
                     "usertype" => "admin"
                 ],
                 [
-                    "name" => "ruthchristian",
+                    "name" => "Ruth Christian",
                     "email" => "ruthchristian@gmail.com",
                     "password" => Hash::make("ruthchristian@gmail.com"),
                     "usertype" => "admin"
                 ],
                 [
-                    "name" => "gregorykaster",
+                    "name" => "Gregory Kaster",
                     "email" => "gregorykaster@gmail.com",
                     "password" => Hash::make("gregorykaster@gmail.com"),
                     "usertype" => "admin"
                 ],
                 [
-                    "name" => "johnierrante",
+                    "name" => "John Ierrante",
                     "email" => "johnierrante@gmail.com",
                     "password" => Hash::make("johnierrante@gmail.com"),
                     "usertype" => "admin"
                 ],
                 [
-                    "name" => "bettydoyle",
+                    "name" => "Betty Doyle",
                     "email" => "bettydoyle@gmail.com",
                     "password" => Hash::make("bettydoyle@gmail.com"),
                     "usertype" => "admin"
                 ],
                 [
-                    "name" => "davidfinch",
+                    "name" => "David Finch",
                     "email" => "davidfinch@gmail.com",
                     "password" => Hash::make("davidfinch@gmail.com"),
                     "usertype" => "admin"

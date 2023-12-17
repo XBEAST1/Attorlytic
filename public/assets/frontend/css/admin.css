@@ -108,6 +108,16 @@ input, textarea {
     width: 50%;
 }
 
+.input-group {
+    margin-top: 100%;
+}
+
+.btn-navigation {
+    color: white;
+    border-color: #d0bf90;
+    background-color: #d0bf90;
+}
+
 @media screen and (max-width: 450px) {
     #sidebar {
         width: 100%;
@@ -141,6 +151,18 @@ input, textarea {
         width: 30%;
     }
 
+    .category {
+        width: 100%;
+    }
+
+    .country, #city {
+        width: 45%;
+    }
+
+    #file {
+        width: 200%;
+    }
+
     #about, #fee {
         width: 100%;
     }
@@ -157,5 +179,10 @@ input, textarea {
     
     .additional-info, .specialize-info {
         margin-left: 2vw;
+    }
+
+    .input-group {
+        margin-top: 0%;
+        padding-bottom: 10%;
     }
 }

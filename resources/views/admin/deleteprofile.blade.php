@@ -22,6 +22,19 @@
             <a href="updateprofile" id="update-profile">Update Profile</a>
             <a href="deleteprofile" id="delete-profile">Delete Profile</a>
         </div>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+            @csrf
+            <div class="input-group dropup ms-4">
+                <button class="btn btn-navigation btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">{{ auth()->user()->name }}</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="profile">Settings</a></li>
+                    <li><a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </form>
     </div>
     <form action="deleteprofile" method="post" enctype="multipart/form-data">
         @csrf
@@ -30,6 +43,7 @@
             <button class="mt-5 ms-3 btn btn-danger p-4">Delete Profile</button>
         </div>
     </form>
+    <script src="assets/frontend/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

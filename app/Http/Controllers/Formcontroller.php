@@ -19,7 +19,7 @@ class Formcontroller extends Controller
             'lastname' => 'required',
             'description' => 'required',
             'gender' => 'required|in:Male,Female',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:8192',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:8192',
             'fee' => 'required|numeric',
             'category' => 'required',
             'country' => 'required',
@@ -31,15 +31,15 @@ class Formcontroller extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect()->back()->with('status', 'error');
+            return redirect()->back()->with('status', 'error')->with('message', 'Please Fill All Fields');
         }
 
         $existingProfile = FormData::where('user_id', $user->id)->first();
 
         if ($existingProfile) {
             $validator = Validator::make([], []);
-            $validator->errors()->add('user_id', 'You can only add one profile.');
-            return redirect()->back()->with('status', 'exist');
+            $validator->errors()->add('user_id', 'Only One Profile Is Alowed For Each Account.');
+            return redirect()->back()->with('status', 'exist')->with('message', 'Only One Profile Is Alowed For Each Account');
         }
 
         $data = new FormData();
@@ -68,9 +68,8 @@ class Formcontroller extends Controller
 
         $data->save();
 
-        return redirect()->back()->with('status', 'success');
+        return redirect()->back()->with('status', 'success')->with('message', 'Profile Added Successfully');
     }
-    
 
 
     function updateprofile(Request $request)
@@ -95,9 +94,13 @@ class Formcontroller extends Controller
         ]);
     
         if ($validator->fails()) {
-            return redirect()->back()->with('status', 'error');
+            return redirect()->back()->with('status', 'error')->with('message', 'Please Fill All Fields');
         }
-    
+        
+        if (!$data) {
+            return redirect()->back()->with('status', 'dontexist')->with('message', 'Profile Does Not Exist');
+        }
+        
         $data->firstname = $request->input('firstname');
         $data->lastname = $request->input('lastname');
         $data->description = $request->input('description');
@@ -125,7 +128,7 @@ class Formcontroller extends Controller
     
         $data->save();
     
-        return redirect()->back()->with('status', 'success');
+        return redirect()->back()->with('status', 'success')->with('message', 'Profile Updated Successfully');
     }    
     
     function deleteprofile() {

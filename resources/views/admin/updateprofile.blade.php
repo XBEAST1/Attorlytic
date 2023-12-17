@@ -22,7 +22,23 @@
             <a href="updateprofile" id="update-profile">Update Profile</a>
             <a href="deleteprofile" id="delete-profile">Delete Profile</a>
         </div>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+            @csrf
+            <div class="input-group dropup ms-4">
+                <button class="btn btn-navigation btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">{{ auth()->user()->name }}</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="profile">Settings</a></li>
+                    <li><a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </form>
     </div>
+
+    @if($profiledata)
+
     <div id="content">
         <h2 id="profile-heading">Update Profile</h2>
         @if(session('status') && session('message') && session('status') === 'success')
@@ -38,6 +54,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
         @endif
+
         <br>
         <form action="updateprofile" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
             @csrf
@@ -70,7 +87,7 @@
             <br>
             <div class="form-group w-50">
                 <label class="form-label" for="image">Image</label> <br>
-                <input type="file" class="form-control file" name="image">
+                <input id="file" type="file" class="form-control file" name="image">
             </div>
             <br>
             <div class="form-group">
@@ -86,7 +103,7 @@
             <br>
             <div class="form-group">
                 <label for="fee">Fee</label> <br>
-                <input class="mt-2 rounded-5 p-2" value="{{ $profiledata->fee }}" name="fee" type="text"
+                <input class="mt-2 rounded-5 p-2" value="{{ $profiledata->fee }}" name="fee" type="number"
                     class="form-control" id="fee">
             </div>
             <br>
@@ -422,6 +439,17 @@
             }
         });
     </script>
+
+    @else
+    
+    <div id="content">
+        <div class="alert alert-danger alert-dismissible fade show">
+            <strong>Error!</strong> Profile Does Not Exist.
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    </div>
+
+    @endif
 </body>
 
 </html>

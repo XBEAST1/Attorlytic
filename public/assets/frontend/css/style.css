@@ -7272,6 +7272,10 @@ button.submit-btn.gd-bg.pay-now {
     margin-top: 50px;
 }
 
+#nav-login {
+    display: inline-flex;
+}
+
 @media screen and (max-width: 450px) {
     #category {
         width: 100%;

@@ -73,29 +73,29 @@
                         <a href="/contact-us">Contact Us</a>
                     </li>
                 </ul>
-            </div>
-            <div>
-                @auth
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-                <div class="input-group ms-5">
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">{{ auth()->user()->name }}</button>
-                    <ul class="dropdown-menu">
-                        @if(auth()->user()->usertype == 'admin')
-                        <li><a class="dropdown-item" href="{{ route('home') }}">Admin Panel</a></li>
-                        @endif
-                        <li><a class="dropdown-item" href="profile">Settings</a></li>
-                        <li><a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                        </li>
-                    </ul>
+                <div id="nav-login">
+                    @auth
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                    <div class="input-group ms-5">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">{{ auth()->user()->name }}</button>
+                        <ul class="dropdown-menu">
+                            @if(auth()->user()->usertype == 'admin')
+                            <li><a class="dropdown-item" href="{{ route('home') }}">Admin Panel</a></li>
+                            @endif
+                            <li><a class="dropdown-item" href="profile">Settings</a></li>
+                            <li><a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                    @else
+                    <a class="btn ms-5" href="{{ route('login') }}">Login</a>
+                    <a class="btn ms-3" href="{{ route('register') }}">Register</a>
+                    @endauth
                 </div>
-                @else
-                <a class="btn ms-5" href="{{ route('login') }}">Login</a>
-                <a class="btn ms-3" href="{{ route('register') }}">Register</a>
-                @endauth
             </div>
         </div>
     </nav>
