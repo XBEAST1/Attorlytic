@@ -111,6 +111,12 @@
             </div>
         </div>
     </nav>
+    @if(session('status') && session('message') && session('status') === 'success')
+    <div class="alert alert-success alert-dismissible fade show">
+        <strong>Success!</strong> Appointment Booked Successfully!
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    @endif
     <div class="breadcrumb-area" style="background-image: url(/assets/uploads/media-uploader/new-pa-31622623781.png);">
         <div class="container">
             <div class="row">
@@ -145,22 +151,6 @@
                                     {{$booking->country}}</div>
                                 <div class="price-wrap">
                                     <h4 class="price">Fee: <span>${{ $booking->fee }}</span></h4>
-                                </div>
-                                <div class="social-share-wrap">
-                                    <ul class="social-share">
-                                        <li><a class="facebook"
-                                                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fxgenious.com%2Flaravel%2Fattorg%2Fappointment%2Fbetty-doyle%2F36"><i
-                                                    class="fab fa-facebook-f"></i></a></li>
-                                        <li><a class="twitter"
-                                                href="https://twitter.com/intent/tweet?text=&amp;url=https%3A%2F%2Fxgenious.com%2Flaravel%2Fattorg%2Fappointment%2Fbetty-doyle%2F36&amp;via=Crunchify"><i
-                                                    class="fab fa-twitter"></i></a></li>
-                                        <li><a class="linkedin"
-                                                href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fxgenious.com%2Flaravel%2Fattorg%2Fappointment%2Fbetty-doyle%2F36&amp;title="><i
-                                                    class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a class="pinterest"
-                                                href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fxgenious.com%2Flaravel%2Fattorg%2Fappointment%2Fbetty-doyle%2F36&amp;media=104&amp;description="><i
-                                                    class="fab fa-pinterest-p"></i></a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -204,30 +194,30 @@
                                     <div class="booking-wrap">
                                         <div class="left-part">
                                             <div class="date-time-block">
-                                                <h4 class="title">Available On <time>December 2023</time></h4>
+                                                <h4 class="title">Available On Days</h4>
                                                 <ul class="time-slot date">
-                                                    <li data-date="12-12-2023">Tue, 12 December, 2023</li>
-                                                    <li data-date="13-12-2023">Wed, 13 December, 2023</li>
-                                                    <li data-date="14-12-2023">Thu, 14 December, 2023</li>
-                                                    <li data-date="15-12-2023">Fri, 15 December, 2023</li>
-                                                    <li data-date="16-12-2023">Sat, 16 December, 2023</li>
-                                                    <li data-date="17-12-2023">Sun, 17 December, 2023</li>
-                                                    <li data-date="18-12-2023">Mon, 18 December, 2023</li>
+                                                    <li name="days[]" value="Monday" data-date="Monday">Monday</li>
+                                                    <li name="days[]" value="Tuesday" data-date="Tuesday">Tuesday</li>
+                                                    <li name="days[]" value="Webnesday" data-date="Webnesday">Webnesday</li>
+                                                    <li name="days[]" value="Thursday" data-date="Thursday">Thursday</li>
+                                                    <li name="days[]" value="Friday" data-date="Friday">Friday</li>
+                                                    <li name="days[]" value="Saturday" data-date="Saturday">Saturday</li>
                                                 </ul>
                                             </div>
                                             <div class="date-time-block">
-                                                <h4 class="title">Availability On <time class="time_slog_date">Tue, 12
-                                                        December, 2023</time></h4>
+                                                <h4 class="title">Available On Time</h4>
                                                 <ul class="time-slot time">
-                                                    <li data-id="1">10:00AM - 11:00AM</li>
-                                                    <li data-id="2">11:00AM - 12:00PM</li>
-                                                    <li data-id="4">1:00PM - 2:00PM</li>
-                                                    <li data-id="5">3:00PM - 4:00PM</li>
-                                                    <li data-id="6">5:00PM - 6:00PM</li>
-                                                    <li data-id="7">7:00PM - 8:00PM</li>
-                                                    <li data-id="8">9:00PM - 10:00PM</li>
-                                                    <li data-id="9">11:00PM - 12:00AM</li>
-                                                    <li data-id="10">8:00AM - 9:00AM</li>
+                                                    <li name="time" value="8-9" data-id="8-9">8:00AM - 9:00AM</li>
+                                                    <li name="time" value="9-10" data-id="9-10">9:00PM - 10:00PM</li>
+                                                    <li name="time" value="10-11" data-id="10-11">10:00AM - 11:00AM</li>
+                                                    <li name="time" value="11-12" data-id="11-12">11:00AM - 12:00PM</li>
+                                                    <li name="time" value="1-2" data-id="1-2">1:00PM - 2:00PM</li>
+                                                    <li name="time" value="2-3" data-id="2-3">2:00PM - 3:00PM</li>
+                                                    <li name="time" value="3-4" data-id="3-4">3:00PM - 4:00PM</li>
+                                                    <li name="time" value="4-5" data-id="4-5">4:00PM - 5:00PM</li>
+                                                    <li name="time" value="5-6" data-id="5-6">5:00PM - 6:00PM</li>
+                                                    <li name="time" value="6-7" data-id="6-7">6:00PM - 7:00PM</li>
+                                                    <li name="time" value="7-8" data-id="7-8">7:00PM - 8:00PM</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -247,12 +237,13 @@
                                                                 <div class="tab-pane fade show active" id="nav-home"
                                                                     role="tabpanel">
                                                                     @auth
-                                                                    <div class="mt-5 form-group btn-wrapper">
-                                                                        <button
-                                                                            id="book-btn"
-                                                                            class="boxed-btn btn-saas btn-block"
-                                                                            type="submit">Book Appointment
-                                                                        </button>
+                                                                    <form action="{{ route('bookingplace') }}" method="POST">
+                                                                        @csrf
+                                                                        <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                                                                        <div class="mt-5 form-group btn-wrapper">
+                                                                            <button id="book-btn" class="boxed-btn btn-saas btn-block" type="submit">Book Appointment</button>
+                                                                        </div>
+                                                                    </form>
                                                                     </div>
                                                                     @else
                                                                     <div class="login-form">

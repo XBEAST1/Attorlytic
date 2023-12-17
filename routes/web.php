@@ -58,7 +58,11 @@ Route::controller(Fetchcontroller::class)->group(function(){
     Route::get('/search', 'search')->name('search');
 });
 
-Route::get('/booking/{id}', [Bookingcontroller::class, 'booking'])->name('booking');
+Route::controller(Bookingcontroller::class)->group(function(){
+    Route::get('/booking/{id}', 'booking')->name('booking');
+    Route::post('/bookingplace', 'appointment')->name('bookingplace')->middleware('auth');
+    Route::get('/deletebooking/{id}', 'deletebooking')->name('deletebooking');
+});
 
 Route::middleware('admin')->group(function () {
     Route::get('/addprofile', [Routecontroller::class, 'addprofile']);

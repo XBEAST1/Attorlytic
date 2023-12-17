@@ -10,6 +10,13 @@
     font-family: 'Cairo Play', sans-serif;
 }
 
+#dashboard-heading {
+    font-family: 'Cairo Play', sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #191919;
@@ -116,6 +123,23 @@ input, textarea {
     color: white;
     border-color: #d0bf90;
     background-color: #d0bf90;
+}
+
+.table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-dark {
+    --bs-table-bg: #282828;
+    --bs-table-striped-color: #fff;
+    --bs-table-hover-bg: #191919;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-color-type: var(--bs-table-striped-color);
+    --bs-table-bg-type: #2c303400;
 }
 
 @media screen and (max-width: 450px) {

@@ -8,6 +8,7 @@
     <link rel="icon" href="assets/uploads/media-uploader/favicon.png" type="image/png">
     <link rel="stylesheet" href="assets/frontend/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/frontend/css/admin.css">
+
 </head>
 
 <body>
@@ -25,8 +26,8 @@
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
             @csrf
             <div class="input-group dropup ms-4">
-                <button class="btn btn-navigation btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">{{ auth()->user()->name }}</button>
+                <button class="btn btn-navigation btn-outline-secondary dropdown-toggle" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">{{ auth()->user()->name }}</button>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="profile">Settings</a></li>
                     <li><a class="dropdown-item" href="{{ route('logout') }}"
@@ -37,7 +38,29 @@
         </form>
     </div>
     <div id="content">
-
+        <h2 id="dashboard-heading">Appointment Panel</h2>
+        <table class="table table-dark w-100 mx-auto table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Accept</th>
+                    <th>Reject</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($bookings as $booking)
+                <tr>
+                    <td>{{ $booking->client->name }}</td>
+                    <td>{{ $booking->day }}</td>
+                    <td>{{ $booking->time }}</td>
+                    <td><a href="{{ route ( 'deletebooking', $booking->client->id) }}" class="btn btn-success">Accept</a></td>
+                    <td><a href="{{ route ( 'deletebooking', $booking->client->id) }}" class="btn btn-danger">Reject</a></td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
     <script src="assets/frontend/js/bootstrap.bundle.min.js"></script>
 </body>

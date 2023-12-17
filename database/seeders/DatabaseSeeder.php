@@ -18,6 +18,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
             profiledatasender::class
         ]);
+        $this->call([
+            clientsender::class
+        ]);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

@@ -1818,53 +1818,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     color: var(--main-color-one);
 }
 
-.widget .social_share {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-}
-
-.widget .social_share li {
-    width: calc(100% / 3);
-    margin: 0;
-    display: block;
-    padding: 20px 0 12px 0;
-    text-align: center;
-    border-radius: 5px;
-    color: #fff;
-}
-
-.widget .social_share li i {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-.widget .social_share li.facebook {
-    background-color: #3b5999;
-}
-
-.widget .social_share li.twitter {
-    background-color: #55acee;
-}
-
-.widget .social_share li.instagram {
-    background-color: #e4405f;
-}
-
-.widget .social_share li a:hover {
-    color: #fff;
-}
-
-.widget .social_share li + li {
-    margin-left: 10px;
-}
-
 .widget .recent_post_item {
     margin: 0;
     padding: 0;
@@ -6681,59 +6634,6 @@ button.submit-btn.gd-bg.pay-now {
     line-height: 30px;
     font-weight: 700;
     margin-bottom: 20px;
-}
-
-.feedback-form-wrapper .title {
-    font-size: 22px;
-    line-height: 30px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.feedback-form-wrapper {
-    background-color: #f8f8f8;
-    padding: 30px;
-    margin-bottom: 30px;
-}
-
-.feedback-wrapper .login-form p {
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 700;
-}
-
-.feedback-wrapper > .login-form {
-    background-color: #f8f8f8;
-    padding: 30px;
-}
-
-.feedback-wrapper > .login-form form {
-    max-width: 450px;
-}
-
-.feedback-comment-list-wrap ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.feedback-comment-list-wrap {
-    background-color: #f8f8f8;
-    padding: 30px;
-}
-
-.feedback-comment-list-wrap li + li {
-    margin-bottom: 20px;
-}
-
-.feedback-comment-list-wrap li .title {
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: 700;
-}
-
-.feedback-comment-list-wrap li .rating-wrap {
-    margin-bottom: 10px;
 }
 
 .booking_details_list {
