@@ -11,24 +11,21 @@
 </head>
 
 <body>
-    </head>
+    <div id="sidebar">
+        <a href="/" class="logo">
+            <img src="assets/uploads/media-uploader/logo1621240982.png" alt />
+        </a>
+        <h2 id="admin-heading">Admin Panel</h2>
+        <div class="side-pages mt-5">
+            <a href="home" id="dashboard">Dashboard</a>
+            <a href="addprofile" id="add-profile">Add Profile</a>
+            <a href="updateprofile" id="update-profile">Update Profile</a>
+            <a href="deleteprofile" id="delete-profile">Delete Profile</a>
+        </div>
+    </div>
+    <div id="content">
 
-    <body>
-        <div id="sidebar">
-            <a href="/" class="logo">
-                <img src="assets/uploads/media-uploader/logo1621240982.png" alt />
-            </a>
-            <h2 id="admin-heading">Admin Panel</h2>
-            <div class="side-pages mt-5">
-                <a href="home" id="dashboard">Dashboard</a>
-                <a href="addprofile" id="add-profile">Add Profile</a>
-                <a href="updateprofile" id="update-profile">Update Profile</a>
-                <a href="deleteprofile" id="delete-profile">Delete Profile</a>
-            </div>
-        </div>
-        <div id="content">
-            
-        </div>
-    </body>
+    </div>
+</body>
 
 </html>

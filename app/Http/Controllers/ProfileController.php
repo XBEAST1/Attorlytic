@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\FormData;
+use Illuminate\Support\Facades\File;
 
 class ProfileController extends Controller
 {
@@ -42,19 +44,30 @@ class ProfileController extends Controller
      */
     public function destroy(Request $request): RedirectResponse
     {
-        $request->validateWithBag('userDeletion', [
+        $request->validate([
             'password' => ['required', 'current_password'],
         ]);
-
+    
         $user = $request->user();
-
+    
         Auth::logout();
-
+    
+        $user_id = $user->id;
+        $profile = FormData::find($user_id);
+    
+        if ($profile) {
+            $imagePath = 'images/' . $profile->image;
+            if (File::exists($imagePath)) {
+                File::delete($imagePath);
+            }
+            $profile->delete();
+        }
+    
         $user->delete();
-
+    
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-
+    
         return Redirect::to('/');
-    }
+    }  
 }

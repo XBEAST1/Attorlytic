@@ -62,7 +62,7 @@ Route::get('/booking/{id}', [Bookingcontroller::class, 'booking'])->name('bookin
 
 Route::middleware('admin')->group(function () {
     Route::get('/addprofile', [Routecontroller::class, 'addprofile']);
-    Route::post('/addprofile', [Formcontroller::class, 'store_data']);
+    Route::post('/addprofile', [Formcontroller::class, 'addprofile']);
     Route::get('/updateprofile', [Routecontroller::class, 'updateprofile']);
     Route::post('/updateprofile', [Formcontroller::class, 'updateprofile']);
     Route::get('/deleteprofile', [Routecontroller::class, 'deleteprofile']);

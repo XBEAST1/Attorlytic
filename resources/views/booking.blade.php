@@ -96,17 +96,17 @@
                         aria-expanded="false">{{ auth()->user()->name }}</button>
                     <ul class="dropdown-menu">
                         @if(auth()->user()->usertype == 'admin')
-                        <li><a class="dropdown-item" href="home">Admin Panel</a></li>
+                        <li><a class="dropdown-item" href="{{ route('home') }}">Admin Panel</a></li>
                         @endif
-                        <li><a class="dropdown-item" href="profile">Settings</a></li>
+                        <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Settings</a></li>
                         <li><a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                         </li>
                     </ul>
                 </div>
                 @else
-                <a class="btn ms-5" href="/login">Login</a>
-                <a class="btn ms-3" href="/register">Register</a>
+                <a class="btn ms-5" href="{{ route('login') }}">Login</a>
+                <a class="btn ms-3" href="{{ route('register') }}">Register</a>
                 @endauth
             </div>
         </div>
@@ -246,6 +246,15 @@
                                                             <div class="tab-content">
                                                                 <div class="tab-pane fade show active" id="nav-home"
                                                                     role="tabpanel">
+                                                                    @auth
+                                                                    <div class="mt-5 form-group btn-wrapper">
+                                                                        <button
+                                                                            id="book-btn"
+                                                                            class="boxed-btn btn-saas btn-block"
+                                                                            type="submit">Book Appointment
+                                                                        </button>
+                                                                    </div>
+                                                                    @else
                                                                     <div class="login-form">
                                                                         <form class="contact-page-form style-01"
                                                                             method="POST" action="{{ route('login') }}">
@@ -285,11 +294,12 @@
                                                                                 </div>
                                                                                 <div class="col-6 text-right">
                                                                                     <a class="d-block"
-                                                                                        href="register">Create new
+                                                                                        href="{{ route('register') }}">Create new
                                                                                         account?</a>
                                                                                 </div>
                                                                             </div>
                                                                         </form>
+                                                                        @endauth
                                                                     </div>
                                                                 </div>
                                                             </div>

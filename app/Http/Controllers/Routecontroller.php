@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\FormData;
 use Illuminate\Support\Facades\Auth;
-use App\Models\profiledatasend;
 
 class Routecontroller extends Controller
 {
@@ -88,7 +87,7 @@ class Routecontroller extends Controller
     }
     public function updateprofile() {
         $user_id = Auth::user()->id;
-        $profiledata = profiledatasend::find($user_id);
+        $profiledata = FormData::find($user_id);
         return view('admin.updateprofile', compact('profiledata','user_id'));
     }
     public function deleteprofile(){

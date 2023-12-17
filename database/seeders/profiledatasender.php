@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\profiledatasend;
+use App\Models\FormData;
 
 class profiledatasender extends Seeder
 {
@@ -247,7 +247,7 @@ class profiledatasender extends Seeder
             ]
         );
         $lawyers->each(function($lawyers){
-            profiledatasend::insert($lawyers);
+            FormData::insert($lawyers);
         });
     }
 }

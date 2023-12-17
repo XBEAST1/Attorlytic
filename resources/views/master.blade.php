@@ -84,7 +84,7 @@
                         aria-expanded="false">{{ auth()->user()->name }}</button>
                     <ul class="dropdown-menu">
                         @if(auth()->user()->usertype == 'admin')
-                        <li><a class="dropdown-item" href="home">Admin Panel</a></li>
+                        <li><a class="dropdown-item" href="{{ route('home') }}">Admin Panel</a></li>
                         @endif
                         <li><a class="dropdown-item" href="profile">Settings</a></li>
                         <li><a class="dropdown-item" href="{{ route('logout') }}"
@@ -93,8 +93,8 @@
                     </ul>
                 </div>
                 @else
-                <a class="btn ms-5" href="/login">Login</a>
-                <a class="btn ms-3" href="/register">Register</a>
+                <a class="btn ms-5" href="{{ route('login') }}">Login</a>
+                <a class="btn ms-3" href="{{ route('register') }}">Register</a>
                 @endauth
             </div>
         </div>

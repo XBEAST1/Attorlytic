@@ -3,24 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use App\Models\profiledatasend;
+use App\Models\FormData;
 
 class Fetchcontroller extends Controller
 {
     public function indexlawyercards()
     {
-        $lawyercards = profiledatasend::all();
+        $lawyercards = FormData::all();
         return view('index', compact('lawyercards'));
     }
     public function aboutlawyercards()
     {
-        $lawyercards = profiledatasend::all();
+        $lawyercards = FormData::all();
         return view('about-us', compact('lawyercards'));
     }
     public function appointmentlawyercards()
     {
-        $lawyercards = profiledatasend::all();
+        $lawyercards = FormData::all();
         return view('appointment', compact('lawyercards'));
     }
     public function search(Request $request)
@@ -28,11 +27,11 @@ class Fetchcontroller extends Controller
         $search = $request['search'] ?? "";
         
         if ($search != ""){
-            $lawyercards = profiledatasend::where('firstname', 'LIKE', "%$search%")
+            $lawyercards = FormData::where('firstname', 'LIKE', "%$search%")
             ->orWhere('lastname', 'LIKE', "%$search%")
             ->get();
         } else {
-            $lawyercards = profiledatasend::all();
+            $lawyercards = FormData::all();
         }
         
         $data = compact('lawyercards', 'search');
