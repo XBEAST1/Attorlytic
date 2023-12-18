@@ -52,11 +52,11 @@
             <tbody>
                 @foreach ($bookings as $booking)
                 <tr>
-                    <td>{{ $booking->client->name }}</td>
+                    <td>{{ $booking->client_relation->name }}</td>
                     <td>{{ $booking->day }}</td>
                     <td>{{ $booking->time }}</td>
-                    <td><a href="{{ route ( 'deletebooking', $booking->client->id) }}" class="btn btn-success">Accept</a></td>
-                    <td><a href="{{ route ( 'deletebooking', $booking->client->id) }}" class="btn btn-danger">Reject</a></td>
+                    <td><a href="{{ route ( 'deletebooking', $booking->id) }}" class="btn btn-success">Accept</a></td>
+                    <td><a href="{{ route ( 'deletebooking', $booking->id) }}" class="btn btn-danger">Reject</a></td>
                 </tr>
                 @endforeach
             </tbody>

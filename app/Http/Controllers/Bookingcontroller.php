@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\FormData;
 use App\Models\Booking;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class Bookingcontroller extends Controller
 {
@@ -16,29 +18,46 @@ class Bookingcontroller extends Controller
             abort(404);
         }
 
-        return view('booking', compact('booking'));
+        return view('booking', compact('booking', 'id'));
     }
 
-    public function deletebooking($id){
-        Booking::destroy($id);
-        return back();
-    }
-
-    public function appointment(Request $request)
+    public function appointment(Request $request, $id)
     {
-        $validatedData = $request->validate([
-            'days' => 'required|array',
-            'days.*' => 'in:Monday,Tuesday,Wednesday,Thursday,Friday,Saturday',
-            'time' => 'required|in:8-9,9-10,10-11,11-12,1-2,2-3,3-4,4-5,5-6,6-7,7-8',
-            'user_id' => 'required|exists:users,id',
-        ]);
-        
-        Booking::create([
-            'user_id' => $validatedData['user_id'],
-            'day' => implode(', ', $validatedData['days']),
-            'time' => $validatedData['time'],
+        $clientid = Auth::user()->id;
+        $selectedDay = $request->input('selected_day');
+        $selectedTime = $request->input('selected_time');
+    
+        $lawyerId = $id;
+    
+        $day_validator = Validator::make($request->all(), [
+            'selected_day' => 'required',
         ]);
     
-        return redirect()->route('home')->with('success', 'Appointment Booked Successfully!');
+        $time_validator = Validator::make($request->all(), [
+            'selected_time' => 'required',
+        ]);
+
+        if ($day_validator->fails()) {
+            return redirect()->back()->with('status', 'dayerror')->with('message', 'Please Select a Day');
+        }
+
+        if ($time_validator->fails()) {
+            return redirect()->back()->with('status', 'timeerror')->with('message', 'Please Select a Time');
+        }
+
+        Booking::create([
+            'client_id' => $clientid,
+            'lawyer_id' => $lawyerId,
+            'day' => $selectedDay,
+            'time' => $selectedTime,
+        ]);
+    
+        return redirect()->back()->with('status', 'success')->with('message', 'Appointment Booked Successfully!');
+    }
+
+    public function deletebooking($id)
+    {
+        Booking::destroy($id);
+        return back();
     }
 }

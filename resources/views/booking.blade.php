@@ -43,6 +43,39 @@
         .ms-5 {
             margin-left: 3rem !important;
         }
+
+        /* Custom Alert Styles */
+        .alert {
+            padding: 15px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        /* Close button styles */
+        .alert button.close {
+            position: relative;
+            top: -2px;
+            right: -21px;
+            line-height: 20px;
+            padding: 0;
+            background-color: transparent;
+            border: 0;
+            font-size: 24px;
+            cursor: pointer;
+        }
     </style>
     <title> {{ $booking->firstname }} {{ $booking->lastname }} - Attorg</title>
 </head>
@@ -91,8 +124,8 @@
                         @csrf
                     </form>
                     <div class="input-group ms-5">
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">{{ auth()->user()->name }}</button>
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">{{ auth()->user()->name }}</button>
                         <ul class="dropdown-menu">
                             @if(auth()->user()->usertype == 'admin')
                             <li><a class="dropdown-item" href="{{ route('home') }}">Admin Panel</a></li>
@@ -111,12 +144,6 @@
             </div>
         </div>
     </nav>
-    @if(session('status') && session('message') && session('status') === 'success')
-    <div class="alert alert-success alert-dismissible fade show">
-        <strong>Success!</strong> Appointment Booked Successfully!
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    </div>
-    @endif
     <div class="breadcrumb-area" style="background-image: url(/assets/uploads/media-uploader/new-pa-31622623781.png);">
         <div class="container">
             <div class="row">
@@ -134,6 +161,21 @@
             </div>
         </div>
     </div>
+    @if(session('status') && session('message') && session('status') === 'success')
+    <div class="alert alert-success alert-dismissible fade show">
+        <strong>Success!</strong> Appointment Booked Successfully!
+    </div>
+    @endif
+    @if(session('status') && session('message') && session('status') === 'dayerror')
+    <div class="alert alert-danger alert-dismissible fade show">
+        <strong>Error!</strong> Please Select a Day.
+    </div>
+    @endif
+    @if(session('status') && session('message') && session('status') === 'timeerror')
+    <div class="alert alert-danger alert-dismissible fade show">
+        <strong>Error!</strong> Please Select a Time.
+    </div>
+    @endif
     <section class="blog-details-content-area padding-top-100 padding-bottom-100">
         <div class="container">
             <div class="row">
@@ -196,28 +238,42 @@
                                             <div class="date-time-block">
                                                 <h4 class="title">Available On Days</h4>
                                                 <ul class="time-slot date">
-                                                    <li name="days[]" value="Monday" data-date="Monday">Monday</li>
-                                                    <li name="days[]" value="Tuesday" data-date="Tuesday">Tuesday</li>
-                                                    <li name="days[]" value="Webnesday" data-date="Webnesday">Webnesday</li>
-                                                    <li name="days[]" value="Thursday" data-date="Thursday">Thursday</li>
-                                                    <li name="days[]" value="Friday" data-date="Friday">Friday</li>
-                                                    <li name="days[]" value="Saturday" data-date="Saturday">Saturday</li>
+                                                    <li name="days[]" data-date="Monday">Monday</li>
+                                                    <li name="days[]" data-date="Tuesday">Tuesday</li>
+                                                    <li name="days[]" data-date="Webnesday">Webnesday
+                                                    </li>
+                                                    <li name="days[]" data-date="Thursday">Thursday
+                                                    </li>
+                                                    <li name="days[]" data-date="Friday">Friday</li>
+                                                    <li name="days[]" data-date="Saturday">Saturday
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <div class="date-time-block">
                                                 <h4 class="title">Available On Time</h4>
                                                 <ul class="time-slot time">
-                                                    <li name="time" value="8-9" data-id="8-9">8:00AM - 9:00AM</li>
-                                                    <li name="time" value="9-10" data-id="9-10">9:00PM - 10:00PM</li>
-                                                    <li name="time" value="10-11" data-id="10-11">10:00AM - 11:00AM</li>
-                                                    <li name="time" value="11-12" data-id="11-12">11:00AM - 12:00PM</li>
-                                                    <li name="time" value="1-2" data-id="1-2">1:00PM - 2:00PM</li>
-                                                    <li name="time" value="2-3" data-id="2-3">2:00PM - 3:00PM</li>
-                                                    <li name="time" value="3-4" data-id="3-4">3:00PM - 4:00PM</li>
-                                                    <li name="time" value="4-5" data-id="4-5">4:00PM - 5:00PM</li>
-                                                    <li name="time" value="5-6" data-id="5-6">5:00PM - 6:00PM</li>
-                                                    <li name="time" value="6-7" data-id="6-7">6:00PM - 7:00PM</li>
-                                                    <li name="time" value="7-8" data-id="7-8">7:00PM - 8:00PM</li>
+                                                    <li name="time" data-id="8:00AM - 9:00AM">8:00AM -
+                                                        9:00AM</li>
+                                                    <li name="time" data-id="9:00AM - 10:00AM">9:00AM -
+                                                        10:00AM</li>
+                                                    <li name="time" data-id="10:00AM - 11:00AM">10:00AM -
+                                                        11:00AM</li>
+                                                    <li name="time" data-id="11:00AM - 12:00PM">11:00AM -
+                                                        12:00PM</li>
+                                                    <li name="time" data-id="1:00PM - 2:00PM">1:00PM -
+                                                        2:00PM</li>
+                                                    <li name="time" data-id="2:00PM - 3:00PM">2:00PM -
+                                                        3:00PM</li>
+                                                    <li name="time" data-id="3:00PM - 4:00PM">3:00PM -
+                                                        4:00PM</li>
+                                                    <li name="time" data-id="4:00PM - 5:00PM">4:00PM -
+                                                        5:00PM</li>
+                                                    <li name="time" data-id="5:00PM - 6:00PM">5:00PM -
+                                                        6:00PM</li>
+                                                    <li name="time" data-id="6:00PM - 7:00PM">6:00PM -
+                                                        7:00PM</li>
+                                                    <li name="time" data-id="7:00PM - 8:00PM">7:00PM -
+                                                        8:00PM</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -237,61 +293,68 @@
                                                                 <div class="tab-pane fade show active" id="nav-home"
                                                                     role="tabpanel">
                                                                     @auth
-                                                                    <form action="{{ route('bookingplace') }}" method="POST">
+                                                                    <form
+                                                                        action="{{ route('bookingplace', ['id' => $id]) }}"
+                                                                        method="POST">
                                                                         @csrf
-                                                                        <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+                                                                        <input type="hidden" name="selected_day"
+                                                                            id="selected_day" value="">
+                                                                        <input type="hidden" name="selected_time"
+                                                                            id="selected_time" value="">
+                                                                        <input type="hidden" name="user_id"
+                                                                            value="{{ auth()->user()->id }}">
                                                                         <div class="mt-5 form-group btn-wrapper">
-                                                                            <button id="book-btn" class="boxed-btn btn-saas btn-block" type="submit">Book Appointment</button>
+                                                                            <button id="book-btn"
+                                                                                class="boxed-btn btn-saas btn-block"
+                                                                                type="submit">Book Appointment</button>
                                                                         </div>
                                                                     </form>
-                                                                    </div>
-                                                                    @else
-                                                                    <div class="login-form">
-                                                                        <form class="contact-page-form style-01"
-                                                                            method="POST" action="{{ route('login') }}">
-                                                                            @csrf
-                                                                            <div class="form-group">
-                                                                                <input class="form-control"
-                                                                                    placeholder="Username" input
-                                                                                    type="text" required id="email"
-                                                                                    type="email" name="email"
-                                                                                    :value="old('email')" required
-                                                                                    autofocus autocomplete="username">
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <input class="form-control"
-                                                                                    placeholder="Password" required
-                                                                                    id="password" type="password"
-                                                                                    name="password" required
-                                                                                    autocomplete="current-password">
-                                                                            </div>
-                                                                            <div class="form-group btn-wrapper">
-                                                                                <button
-                                                                                    class="boxed-btn btn-saas btn-block"
-                                                                                    id="login_btn"
-                                                                                    type="submit">Login</button>
-                                                                            </div>
-                                                                            <div class="row mb-4 rmber-area">
-                                                                                <div class="col-6">
-                                                                                    <div
-                                                                                        class="custom-control custom-checkbox ">
-                                                                                        <input type="checkbox"
-                                                                                            id="remember_me"
-                                                                                            type="checkbox"
-                                                                                            name="remember"
-                                                                                            class="custom-control-input"
-                                                                                            id="remember">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-6 text-right">
-                                                                                    <a class="d-block"
-                                                                                        href="{{ route('register') }}">Create new
-                                                                                        account?</a>
+                                                                </div>
+                                                                @else
+                                                                <div class="login-form">
+                                                                    <form class="contact-page-form style-01"
+                                                                        method="POST" action="{{ route('login') }}">
+                                                                        @csrf
+                                                                        <div class="form-group">
+                                                                            <input class="form-control"
+                                                                                placeholder="Username" input type="text"
+                                                                                required id="email" type="email"
+                                                                                name="email" :value="old('email')"
+                                                                                required autofocus
+                                                                                autocomplete="username">
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input class="form-control"
+                                                                                placeholder="Password" required
+                                                                                id="password" type="password"
+                                                                                name="password" required
+                                                                                autocomplete="current-password">
+                                                                        </div>
+                                                                        <div class="form-group btn-wrapper">
+                                                                            <button class="boxed-btn btn-saas btn-block"
+                                                                                id="login_btn"
+                                                                                type="submit">Login</button>
+                                                                        </div>
+                                                                        <div class="row mb-4 rmber-area">
+                                                                            <div class="col-6">
+                                                                                <div
+                                                                                    class="custom-control custom-checkbox ">
+                                                                                    <input type="checkbox"
+                                                                                        id="remember_me" type="checkbox"
+                                                                                        name="remember"
+                                                                                        class="custom-control-input"
+                                                                                        id="remember">
                                                                                 </div>
                                                                             </div>
-                                                                        </form>
-                                                                        @endauth
-                                                                    </div>
+                                                                            <div class="col-6 text-right">
+                                                                                <a class="d-block"
+                                                                                    href="{{ route('register') }}">Create
+                                                                                    new
+                                                                                    account?</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                    @endauth
                                                                 </div>
                                                             </div>
                                                         </nav>
@@ -306,7 +369,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <footer class="footer-area">
@@ -447,6 +509,35 @@
             </div>
         </div>
     </div>
+    <script>
+        // Add this script to update hidden input fields
+        document.addEventListener('DOMContentLoaded', function () {
+            let selectedDay = null;
+            let selectedTime = null;
+
+            // Add click event listener to days
+            document.querySelectorAll('.time-slot.date li').forEach(function (day) {
+                day.addEventListener('click', function () {
+                    selectedDay = this.dataset.date;
+                    updateHiddenInputs();
+                });
+            });
+
+            // Add click event listener to times
+            document.querySelectorAll('.time-slot.time li').forEach(function (time) {
+                time.addEventListener('click', function () {
+                    selectedTime = this.dataset.id;
+                    updateHiddenInputs();
+                });
+            });
+
+            function updateHiddenInputs() {
+                document.getElementById('selected_day').value = selectedDay;
+                document.getElementById('selected_time').value = selectedTime;
+            }
+        });
+    </script>
+
     <script data-cfasync="false"
         src="{{ asset('/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/bootstrap.min.js') }}"></script>

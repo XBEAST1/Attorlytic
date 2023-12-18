@@ -60,7 +60,7 @@ Route::controller(Fetchcontroller::class)->group(function(){
 
 Route::controller(Bookingcontroller::class)->group(function(){
     Route::get('/booking/{id}', 'booking')->name('booking');
-    Route::post('/bookingplace', 'appointment')->name('bookingplace')->middleware('auth');
+    Route::post('/bookingplace/{id}', 'appointment')->name('bookingplace')->middleware('auth');
     Route::get('/deletebooking/{id}', 'deletebooking')->name('deletebooking');
 });
 

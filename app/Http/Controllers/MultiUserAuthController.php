@@ -18,8 +18,8 @@ class MultiUserAuthController extends Controller
                 return view('index', compact('lawyercards'));
             } else if ($usertype == 'admin'){
                 $lawyer_id = Auth::user()->id;
-                $bookings = Booking::with('client')->where('lawyer_id', $lawyer_id)->get();
-                return view('admin.dashboard', compact('lawyer_id', 'bookings'));
+                $bookings = Booking::with('client_relation')->where('lawyer_id', $lawyer_id)->get();
+                return view('admin.dashboard', compact('bookings'));
             }
         }
     }

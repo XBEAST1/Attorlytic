@@ -9,7 +9,7 @@ class Booking extends Model
 {
     use HasFactory;
 
-    public function client()
+    public function client_relation()
     {
         return $this->belongsTo(User::class, 'client_id');
     }
