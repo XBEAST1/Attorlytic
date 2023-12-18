@@ -17,7 +17,7 @@
 
             <div class="input-field">
                 <label for="password" value="{{ __('Password') }}" ></label>
-                <input id="password" name="password" type="text" placeholder="{{ __('Password') }}" />
+                <input id="password" name="password" type="password" placeholder="{{ __('Password') }}" />
                 <x-input-error :messages="$errors->userDeletion->get('password')" />
             </div>
 

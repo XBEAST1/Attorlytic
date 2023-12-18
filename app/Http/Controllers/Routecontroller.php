@@ -87,11 +87,12 @@ class Routecontroller extends Controller
     }
     public function updateprofile() {
         $user_id = Auth::user()->id;
-        $profiledata = FormData::find($user_id);
+        $profiledata = FormData::where('user_id', $user_id)->first();
         return view('admin.updateprofile', compact('profiledata','user_id'));
     }
     public function deleteprofile(){
         $user_id = Auth::user()->id;
-        return view ('admin.deleteprofile', compact('user_id'));
+        $profiledata = FormData::where('user_id', $user_id)->first();
+        return view ('admin.deleteprofile', compact('profiledata','user_id'));
     }
 }

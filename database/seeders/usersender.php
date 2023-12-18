@@ -52,30 +52,6 @@ class usersender extends Seeder
                     "password" => Hash::make("davidfinch@gmail.com"),
                     "usertype" => "admin"
                 ],
-                [
-                    "name" => "Joe",
-                    "email" => "Joe@gmail.com",
-                    "password" => Hash::make("Joe@gmail.com"),
-                    "usertype" => "user"
-                ],
-                [
-                    "name" => "John",
-                    "email" => "John@gmail.com",
-                    "password" => Hash::make("John@gmail.com"),
-                    "usertype" => "user"
-                ],
-                [
-                    "name" => "Sam",
-                    "email" => "Sam@gmail.com",
-                    "password" => Hash::make("Sam@gmail.com"),
-                    "usertype" => "user"
-                ],
-                [
-                    "name" => "Austin",
-                    "email" => "Austin@gmail.com",
-                    "password" => Hash::make("Austin@gmail.com"),
-                    "usertype" => "user"
-                ],
             ]
         );
         $lawyers->each(function($lawyers){
