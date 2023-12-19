@@ -15,6 +15,11 @@
         <a href="/" class="logo">
             <img src="assets/uploads/media-uploader/logo1621240982.png" alt />
         </a>
+        <div id="sidebar-toggle-btn">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
         <h2 id="admin-heading">Admin Panel</h2>
         <div class="side-pages mt-5">
             <a href="home" id="dashboard">Dashboard</a>
@@ -24,8 +29,8 @@
         </div>
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
             @csrf
-            <div class="input-group dropup ms-4">
-                <button class="btn btn-navigation btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            <div class="input-group dropup">
+                <button class="btn btn-navigation btn-outline-secondary dropdown-toggle ms-4" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">{{ auth()->user()->name }}</button>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="profile">Settings</a></li>
@@ -41,7 +46,7 @@
         @csrf
         <div id="content">
             <h2 id="profile-heading">Delete Profile</h2>
-            <button class="mt-5 ms-3 btn btn-danger p-4">Delete Profile</button>
+            <button class="mt-5 w-100 btn btn-danger p-4">Delete Profile</button>
         </div>
     </form>
     <script src="assets/frontend/js/bootstrap.bundle.min.js"></script>
@@ -53,6 +58,14 @@
         </div>
     </div>
     @endif
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('sidebar-toggle-btn');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>

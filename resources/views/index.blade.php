@@ -174,10 +174,6 @@
 
 
     <section class="why-choose-use-area overflow-hidden padding-top-115 padding-bottom-85">
-        <div class="blind-statue">
-            <img src="assets/uploads/media-uploader/standing-women1621407448.png"
-                alt />
-        </div>
         <div class="right-absolute-area">
             <div class="video-with-image icon-left">
                 <div class="img-wrapper">

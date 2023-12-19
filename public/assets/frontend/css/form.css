@@ -231,12 +231,6 @@ select:focus {
 }
 
 @media screen and (max-width: 1400px) {
-  .container {
-    margin-right: 13rem;
-  }
-}
-
-@media screen and (max-width: 450px) {
   body {
     content: "";
     position: absolute;

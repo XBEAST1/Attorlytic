@@ -36,7 +36,7 @@
 
 <body>
     @yield('header')
-    <nav class="navbar navbar-area navbar-expand-lg nav-style-01 fixed-top">
+    <nav class="navbar navbar-area navbar-expand-xl nav-style-01 fixed-top">
         <div class="container nav-container">
             <div class="responsive-mobile-menu">
                 <div class="logo-wrapper">
@@ -78,7 +78,7 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
-                    <div class="input-group ms-5">
+                    <div class="input-group btn-nav">
                         <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">{{ auth()->user()->name }}</button>
                         <ul class="dropdown-menu">
@@ -92,7 +92,7 @@
                         </ul>
                     </div>
                     @else
-                    <a class="btn ms-5" href="{{ route('login') }}">Login</a>
+                    <a class="btn btn-nav" href="{{ route('login') }}">Login</a>
                     <a class="btn ms-3" href="{{ route('register') }}">Register</a>
                     @endauth
                 </div>
