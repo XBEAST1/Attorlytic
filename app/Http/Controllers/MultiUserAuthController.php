@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Booking;
+use App\Models\FormData;
 use Illuminate\Http\Request;
 
 class MultiUserAuthController extends Controller
@@ -18,8 +19,9 @@ class MultiUserAuthController extends Controller
                 return view('index', compact('lawyercards'));
             } else if ($usertype == 'admin'){
                 $lawyer_id = Auth::user()->id;
+                $image = FormData::where('user_id', $lawyer_id)->first();
                 $bookings = Booking::with('client_relation')->where('lawyer_id', $lawyer_id)->get();
-                return view('admin.dashboard', compact('bookings'));
+                return view('admin.dashboard', compact('bookings', 'image'));
             }
         }
     }

@@ -6619,4 +6619,32 @@ ul.wp-block-latest-posts.is-grid.alignwide {
         width: 50%;
         padding-left: 0px
     }
+
+    .top-lawyer-area .left-content .img-wrap img {
+        width: 121%;
+    }
+
+    img {
+        max-width: 121%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .top-lawyer-area .left-content .img-wrap img {
+        width: 156%;
+    }
+
+    img {
+        max-width: 156%;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .top-lawyer-area .left-content .img-wrap img {
+        width: 430%;
+    }
+
+    img {
+        max-width: 430%;
+    }
 }

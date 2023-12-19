@@ -83,16 +83,22 @@ class Routecontroller extends Controller
         return view('fancy-she-stuff');
     }
     public function addprofile(){
-        return view('admin.addprofile');
+        $lawyer_id = Auth::user()->id;
+        $image = FormData::where('user_id', $lawyer_id)->first();
+        return view('admin.addprofile', compact('image'));
     }
     public function updateprofile() {
+        $lawyer_id = Auth::user()->id;
+        $image = FormData::where('user_id', $lawyer_id)->first();
         $user_id = Auth::user()->id;
         $profiledata = FormData::where('user_id', $user_id)->first();
-        return view('admin.updateprofile', compact('profiledata','user_id'));
+        return view('admin.updateprofile', compact('profiledata','user_id','image'));
     }
     public function deleteprofile(){
+        $lawyer_id = Auth::user()->id;
+        $image = FormData::where('user_id', $lawyer_id)->first();
         $user_id = Auth::user()->id;
         $profiledata = FormData::where('user_id', $user_id)->first();
-        return view ('admin.deleteprofile', compact('profiledata','user_id'));
+        return view ('admin.deleteprofile', compact('profiledata','user_id','image'));
     }
 }
