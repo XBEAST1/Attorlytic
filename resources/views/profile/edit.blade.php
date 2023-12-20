@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/frontend/css/style.css">
     <link rel="stylesheet" href="assets/frontend/css/form.css">
     <link rel="icon" href="assets/uploads/media-uploader/favicon.png" type="image/png">
-    <title>Attorlytic Profile Management</title>
+    <title>Attorlytic | Profile Management</title>
 </head>
 
 <body>

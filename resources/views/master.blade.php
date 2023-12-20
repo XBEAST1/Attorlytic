@@ -100,9 +100,6 @@
         </div>
     </nav>
 
-    {{-- Footer --}}
-
-    @yield('footer')
     <footer class="footer-area">
         <div class="footer-top padding-top-100 padding-bottom-65">
             <div class="container">

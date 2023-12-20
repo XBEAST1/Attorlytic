@@ -3,6 +3,7 @@
 
 @if($profiledata)
 
+<title>Update Profile</title>
 <div id="content">
     <h1 id="profile-heading">Update Profile</h1>
     @if(session('status') && session('message') && session('status') === 'success')

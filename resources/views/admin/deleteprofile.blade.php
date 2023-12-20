@@ -1,6 +1,8 @@
 @extends('admin.masteradmin')
 @section('main')
 @if($profiledata)
+
+<title>Delete Profile</title>
 <form action="deleteprofile" method="post" enctype="multipart/form-data">
     @csrf
     <div id="content">

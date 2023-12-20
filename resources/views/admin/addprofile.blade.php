@@ -1,5 +1,7 @@
 @extends('admin.masteradmin')
 @section('main')
+
+<title>Add Profile</title>
 <div id="content">
     <h1 id="profile-heading">Add Profile</h1>
     @if(session('status') && session('message') && session('status') === 'success')

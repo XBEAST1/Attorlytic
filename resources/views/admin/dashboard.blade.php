@@ -1,5 +1,7 @@
 @extends('admin.masteradmin')
 @section('main')
+
+<title>Dashboard</title>
 <div id="content">
   <h1 id="dashboard-heading">Appointment Panel</h1>
   <table class="table table-dark w-100 mx-auto table-hover table-striped">
