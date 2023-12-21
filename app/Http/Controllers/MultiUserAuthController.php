@@ -12,17 +12,21 @@ class MultiUserAuthController extends Controller
 {
     public function index(Request $request)
     {
-        if (Auth::id()){
+        if (Auth::id()) {
             $usertype = Auth()->user()->usertype;
-            if ($usertype == 'user'){
+            if ($usertype == 'user') {
                 $lawyercards = User::all();
                 return view('index', compact('lawyercards'));
-            } else if ($usertype == 'admin'){
+            } else if ($usertype == 'admin') {
                 $lawyer_id = Auth::user()->id;
                 $image = FormData::where('user_id', $lawyer_id)->first();
                 $bookings = Booking::with('client_relation')->where('lawyer_id', $lawyer_id)->get();
                 return view('admin.dashboard', compact('bookings', 'image'));
+            } else {
+                return redirect()->back();
             }
+        } else {
+            return redirect()->back();
         }
     }
 }
