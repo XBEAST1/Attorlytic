@@ -467,8 +467,16 @@ main .post-content .post-meta {
   margin-left: 15.5vw;
 }
 
+.lastname-error {
+  margin-left: 6vw;
+}
+
 .city {
   margin-left: 17vw;
+}
+
+.city-error {
+  margin-left: 7vw;
 }
 
 .form-button {

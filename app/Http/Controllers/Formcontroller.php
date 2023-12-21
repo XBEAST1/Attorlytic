@@ -14,12 +14,12 @@ class Formcontroller extends Controller
     {
         $user = $request->user();
         
-        $validator = Validator::make($request->all(), [
+        $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
             'description' => 'required',
             'gender' => 'required|in:Male,Female',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:8192',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp',
             'fee' => 'required|numeric',
             'category' => 'required',
             'country' => 'required',
@@ -29,10 +29,6 @@ class Formcontroller extends Controller
             'specializeinfo' => 'required',
             'about' => 'required',
         ]);
-
-        if ($validator->fails()) {
-            return redirect()->back()->with('status', 'error')->with('message', 'Please Fill All Fields');
-        }
 
         $existingProfile = FormData::where('user_id', $user->id)->first();
 
@@ -77,7 +73,7 @@ class Formcontroller extends Controller
         $user_id = Auth::user()->id;
         $data = FormData::find($user_id);
     
-        $validator = Validator::make($request->all(), [
+        $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
             'description' => 'required',
@@ -90,17 +86,15 @@ class Formcontroller extends Controller
             'additionalinfo' => 'required',
             'specializeinfo' => 'required',
             'about' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif|max:8192',
+            'image' => 'image|mimes:jpeg,png,jpg,gif',
         ]);
-    
-        if ($validator->fails()) {
-            return redirect()->back()->with('status', 'error')->with('message', 'Please Fill All Fields');
-        }
         
         if (!$data) {
             return redirect()->back()->with('status', 'dontexist')->with('message', 'Profile Does Not Exist');
         }
         
+        $data = new FormData();
+
         $data->firstname = $request->input('firstname');
         $data->lastname = $request->input('lastname');
         $data->description = $request->input('description');
@@ -129,7 +123,7 @@ class Formcontroller extends Controller
         $data->save();
     
         return redirect()->back()->with('status', 'success')->with('message', 'Profile Updated Successfully');
-    }    
+    }
     
     function deleteprofile() {
         $user_id = Auth::user()->id;

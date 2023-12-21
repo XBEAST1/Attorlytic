@@ -30,12 +30,29 @@
                 name="firstname" id="firstname">
             <input class="rounded-5 p-2 ms-3" type="text" value="{{ $profiledata->lastname }}" class="form-control"
                 name="lastname" id="lastname">
+            <br>
+            <span class="text-danger">
+                @error('firstname')
+                {{ $message }}
+                @enderror
+            </span>
+            <span class="text-danger lastname-error">
+                @error('lastname')
+                {{ $message }}
+                @enderror
+            </span>
         </div>
         <br>
         <div class="form-group">
             <label for="description">Description</label> <br>
             <textarea class="mt-2 rounded-5 p-2" name="description" id="description"
                 rows="5">{{ $profiledata->description }}</textarea>
+            <br>
+            <span class="text-danger">
+                @error('description')
+                {{ $message }}
+                @enderror
+            </span>
         </div>
         <br>
         <h5>Gender</h5>
@@ -49,10 +66,22 @@
             <label for="" class="ms-2 form-check-label">Female</label>
         </div>
         <br>
+        <span class="text-danger">
+            @error('gender')
+            {{ $message }}
+            @enderror
+        </span>
+        <br>
         <br>
         <div class="form-group w-50">
             <label class="form-label" for="image">Image</label> <br>
             <input id="file" type="file" class="form-control file rounded-5" name="image">
+            <br>
+            <span class="text-danger">
+                @error('image')
+                {{ $message }}
+                @enderror
+            </span>
         </div>
         <br>
         <div class="form-group">
@@ -70,6 +99,12 @@
             <label for="fee">Fee</label> <br>
             <input class="mt-2 rounded-5 p-2" value="{{ $profiledata->fee }}" name="fee" type="number"
                 class="form-control" id="fee">
+            <br>
+            <span class="text-danger">
+                @error('fee')
+                {{ $message }}
+                @enderror
+            </span>
         </div>
         <br>
         <div class="form-group">
@@ -324,24 +359,46 @@
             </select>
             <input class="mt-2 rounded-5 p-2 ms-3" value="{{ $profiledata->city }}" name="city" type="text"
                 class="form-control" id="city">
+            <br>
+            <span class="text-danger">
+                @error('country')
+                {{ $message }}
+                @enderror
+            </span>
+            <span class="text-danger city-error">
+                @error('city')
+                {{ $message }}
+                @enderror
+            </span>
         </div>
         <br>
         <div class="form-group">
             <label for="education-info">Education Info</label>
             <label class="additional-info" for="additional-info">Additional Info</label>
             <label class="specialize-info" for="specialize-info">Specialize Info</label> <br>
-            <input class="mt-2 rounded-5 p-2" name="educationinfo" value="{{ $profiledata->educationinfo }}"
-                type="text" class="form-control" id="education-info">
+            <input class="mt-2 rounded-5 p-2" name="educationinfo" value="{{ $profiledata->educationinfo }}" type="text"
+                class="form-control" id="education-info">
             <input class="mt-2 rounded-5 p-2 ms-2" name="additionalinfo" value="{{ $profiledata->additionalinfo }}"
                 type="text" class="form-control" id="additional-info">
             <input class="mt-2 rounded-5 p-2 ms-2" name="specializeinfo" value="{{ $profiledata->specializeinfo }}"
                 type="text" class="form-control" id="specialize-info">
+            <br>
+            <span class="text-danger">
+                @error('educationinfo')
+                {{ $message }}
+                @enderror
+            </span>
         </div>
         <br>
         <div class="form-group">
             <label for="about">About</label><br>
-            <textarea class="mt-2 rounded-5 p-2" name="about" id="about"
-                rows="10">{{ $profiledata->about }}</textarea>
+            <textarea class="mt-2 rounded-5 p-2" name="about" id="about" rows="10">{{ $profiledata->about }}</textarea>
+            <br>
+            <span class="text-danger">
+                @error('about')
+                {{ $message }}
+                @enderror
+            </span>
         </div>
         <br>
         <br>
