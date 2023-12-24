@@ -28,6 +28,18 @@ class Formcontroller extends Controller
             'additionalinfo' => 'required',
             'specializeinfo' => 'required',
             'about' => 'required',
+        ],[
+            'firstname.required' => 'The First Name Field Is Required',
+            'lastname.required' => 'The Last Name Field Is Required',
+            'description.required' => 'The Description Field Is Required',
+            'gender.required' => 'Please Select a Gender',
+            'image.required' => 'The Image Is Required',
+            'fee.required' => 'The Fee Field Is Required',
+            'category.required' => 'Please Select a Category',
+            'country.required' => 'Please Select a Country Country',
+            'city.required' => 'The City Field Is Required',
+            'educationinfo.required' => 'These Fields Are Required',
+            'about.required' => 'The About Field Is Required', 
         ]);
 
         $existingProfile = FormData::where('user_id', $user->id)->first();
@@ -73,7 +85,8 @@ class Formcontroller extends Controller
         $user_id = Auth::user()->id;
         $data = FormData::find($user_id);
     
-        $request->validate([
+
+        $request->validate ([
             'firstname' => 'required',
             'lastname' => 'required',
             'description' => 'required',
@@ -87,14 +100,24 @@ class Formcontroller extends Controller
             'specializeinfo' => 'required',
             'about' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif',
+        ],[
+            'firstname.required' => 'The First Name Field Is Required',
+            'lastname.required' => 'The Last Name Field Is Required',
+            'description.required' => 'The Description Field Is Required',
+            'gender.required' => 'Please Select a Gender',
+            'image.required' => 'The Image Is Required',
+            'fee.required' => 'The Fee Field Is Required',
+            'category.required' => 'Please Select a Category',
+            'country.required' => 'Please Select a Country Country',
+            'city.required' => 'The City Field Is Required',
+            'educationinfo.required' => 'These Fields Are Required',
+            'about.required' => 'The About Field Is Required', 
         ]);
-        
+    
         if (!$data) {
             return redirect()->back()->with('status', 'dontexist')->with('message', 'Profile Does Not Exist');
         }
         
-        $data = new FormData();
-
         $data->firstname = $request->input('firstname');
         $data->lastname = $request->input('lastname');
         $data->description = $request->input('description');

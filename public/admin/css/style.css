@@ -454,29 +454,34 @@ main .post-content .post-meta {
   width: 16%;
 }
 
-.additional-info,
+.additional-info {
+  position: absolute;
+  left: 27vw;
+}
+
 .specialize-info {
-  margin: 0 auto 0 85px;
+  position: absolute;
+  left: 40.7vw;
 }
 
 .form-check {
   display: inline-block;
 }
 
-.lastname {
-  margin-left: 15.5vw;
-}
-
 .lastname-error {
-  margin-left: 6vw;
+  position: absolute;
+  left: 34vw;
 }
 
-.city {
-  margin-left: 17vw;
+.city,
+.lastname {
+  position: absolute;
+  left: 34vw;
 }
 
 .city-error {
-  margin-left: 7vw;
+  position: absolute;
+  left: 34vw;
 }
 
 .form-button {
@@ -564,16 +569,29 @@ textarea {
     width: 30%;
   }
 
+  .additional-info {
+    position: absolute;
+    left: 40vw;
+  }
+
+  .specialize-info {
+    position: absolute;
+    left: 65.7vw;
+  }
+
   #sidebar-toggle-btn {
     left: 92vw;
   }
 
-  .lastname {
-    margin-left: 27.5vw;
+  .lastname,
+  .city {
+    position: absolute;
+    left: 57vw;
   }
 
-  .city {
-    margin-left: 31vw;
+  .lastname-error, .city-error {
+    position: absolute;
+    left: 57vw;
   }
 }
 
@@ -601,12 +619,10 @@ textarea {
     width: 100%;
   }
 
+  .lastname,
   .city {
-    margin-left: 32vw;
-  }
-
-  .lastname {
-    margin-left: 27vw;
+    position: absolute;
+    left: 52vw;
   }
 
   #firstname,
@@ -643,9 +659,19 @@ textarea {
     padding: 15px
   }
 
-  .additional-info,
+  .additional-info {
+    position: absolute;
+    left: 37vw;
+  }
+
   .specialize-info {
-    margin-left: 2vw;
+    position: absolute;
+    left: 65.7vw;
+  }
+
+  .lastname-error, .city-error {
+    position: absolute;
+    left: 52vw;
   }
 
   .input-group {

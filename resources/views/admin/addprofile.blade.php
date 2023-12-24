@@ -23,8 +23,8 @@
         <div class="form-group">
             <label for="username">First Name</label>
             <label class="lastname" for="last name">Last Name</label> <br>
-            <input class="mt-2 rounded-5 p-2" type="text" class="form-control" name="firstname" id="firstname">
-            <input class="rounded-5 p-2 ms-3" type="text" class="form-control" name="lastname" id="lastname">
+            <input class="mt-2 rounded-5 p-2" value="{{old('firstname')}}" type="text" class="form-control" name="firstname" id="firstname">
+            <input class="rounded-5 p-2 ms-3" value="{{old('lastname')}}" type="text" class="form-control" name="lastname" id="lastname">
             <br>
             <span class="text-danger">
                 @error('firstname')
@@ -40,7 +40,7 @@
         <br>
         <div class="form-group">
             <label for="description">Description</label> <br>
-            <textarea class="mt-2 rounded-5 p-2" name="description" id="description" rows="5"></textarea>
+            <textarea class="mt-2 rounded-5 p-2" value="{{old('description')}}" name="description" id="description" rows="5"></textarea>
             <br>
             <span class="text-danger">
                 @error('description')
@@ -91,7 +91,7 @@
         <br>
         <div class="form-group">
             <label for="fee">Fee</label> <br>
-            <input class="mt-2 rounded-5 p-2" name="fee" type="number" class="form-control" id="fee">
+            <input class="mt-2 rounded-5 p-2" value="{{old('fee')}}" name="fee" type="number" class="form-control" id="fee">
             <br>
             <span class="text-danger">
                 @error('fee')
@@ -349,7 +349,7 @@
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
             </select>
-            <input class="mt-2 rounded-5 p-2 ms-3" name="city" type="text" class="form-control" id="city">
+            <input class="mt-2 rounded-5 p-2 ms-3" value="{{old('city')}}" name="city" type="text" class="form-control" id="city">
             <br>
             <span class="text-danger">
                 @error('country')
@@ -367,10 +367,10 @@
             <label for="education-info">Education Info</label>
             <label class="additional-info" for="additional-info">Additional Info</label>
             <label class="specialize-info" for="specialize-info">Specialize Info</label> <br>
-            <input class="mt-2 rounded-5 p-2" name="educationinfo" type="text" class="form-control" id="education-info">
-            <input class="mt-2 rounded-5 p-2 ms-2" name="additionalinfo" type="text" class="form-control"
+            <input class="mt-2 rounded-5 p-2" value="{{old('educationinfo')}}" name="educationinfo" type="text" class="form-control" id="education-info">
+            <input class="mt-2 rounded-5 p-2 ms-2" value="{{old('additionalinfo')}}" name="additionalinfo" type="text" class="form-control"
                 id="additional-info">
-            <input class="mt-2 rounded-5 p-2 ms-2" name="specializeinfo" type="text" class="form-control"
+            <input class="mt-2 rounded-5 p-2 ms-2" value="{{old('specializeinfo')}}" name="specializeinfo" type="text" class="form-control"
                 id="specialize-info">
             <br>
             <span class="text-danger">
@@ -382,7 +382,7 @@
         <br>
         <div class="form-group">
             <label for="about">About</label> <br>
-            <textarea class="mt-2 rounded-5 p-2" name="about" id="about" rows="10"></textarea>
+            <textarea class="mt-2 rounded-5 p-2" value="{{old('about')}}" name="about" id="about" rows="10"></textarea>
             <br>
             <span class="text-danger">
                 @error('about')
