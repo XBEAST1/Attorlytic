@@ -27,7 +27,9 @@ class Bookingcontroller extends Controller
         $selectedDay = $request->input('selected_day');
         $selectedTime = $request->input('selected_time');
     
-        $lawyerId = $id;
+        $user_id = $id;
+        $formData = FormData::find($user_id);
+        $lawyerId = $formData->user_id;
     
         $day_validator = Validator::make($request->all(), [
             'selected_day' => 'required',

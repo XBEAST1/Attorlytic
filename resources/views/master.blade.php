@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="assets/frontend/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/frontend/css/all.min.css">
     <link rel="stylesheet" href="assets/frontend/css/flaticon.css">
-    <link rel="stylesheet" href="assets/frontend/css/dynamic-style.css">
     <link rel="stylesheet" href="assets/frontend/css/responsive.css">
     <link rel="stylesheet" href="assets/frontend/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/frontend/css/style.css">
@@ -248,7 +247,6 @@
     <script src="assets/frontend/js/jquery.counterup.min.js"></script>
     <script src="assets/frontend/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/frontend/js/isotope.pkgd.min.js"></script>
-    <script src="assets/frontend/js/dynamic-script.js"></script>
     <script src="assets/frontend/js/bootstrap.bundle.min.js"></script>
     <script src="assets/frontend/js/bootstrap.min.js"></script>
     <script src="assets/frontend/js/main.js"></script>

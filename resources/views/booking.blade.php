@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/frontend/css/dynamic-style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}">
     <script src="{{ asset('assets/common/js/jquery-3.6.0.min.js') }}"></script>
@@ -476,7 +475,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="copyright-area-inner">
-                            © 2023 All right reserved by Attorg
+                            © 2023 All right reserved by Attorlytic
                         </div>
                     </div>
                 </div>
@@ -550,7 +549,6 @@
     <script src="{{ asset('assets/frontend/js/jquery.counterup.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/imagesloaded.pkgd.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets/frontend/js/dynamic-script.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/frontend/js/main.js') }}"></script>
     <script>
