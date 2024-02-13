@@ -70,7 +70,7 @@ class Formcontroller extends Controller
             $image = $request->file('image');
             $ext = $image->getClientOriginalExtension();
             $image_name = time() . "." . $ext;
-            $image->move('images', $image_name);
+            $image->move(public_path('images'), $image_name);
             $data->image = $image_name;
         }
 
