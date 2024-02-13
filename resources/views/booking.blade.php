@@ -15,16 +15,16 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ secure_asset('assets/frontend/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('assets/frontend/css/bootstrap.min4.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('assets/frontend/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('assets/frontend/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('assets/frontend/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('assets/frontend/css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('assets/frontend/css/responsive.css') }}">
-    <link rel="stylesheet" href="{{ secure_asset('assets/frontend/css/style.css') }}">
-    <script src="{{ secure_asset('assets/common/js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ secure_asset('assets/common/js/jquery-migrate-3.3.2.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/bootstrap.min4.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}">
+    <script src="{{ asset('assets/common/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('assets/common/js/jquery-migrate-3.3.2.min.js') }}"></script>
 
 
     <style>
@@ -537,19 +537,19 @@
         });
     </script>
 
-    <script data-cfasync="false" src="{{ secure_asset('/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script>
-    <script src="{{ secure_asset('assets/frontend/js/bootstrap.min.js') }}"></script>
-    <script src="{{ secure_asset('assets/common/js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ secure_asset('assets/common/js/jquery-migrate-3.3.2.min.js') }}"></script>
-    <script src="{{ secure_asset('assets/frontend/js/jquery.magnific-popup.js') }}"></script>
-    <script src="{{ secure_asset('assets/frontend/js/wow.min.js') }}"></script>
-    <script src="{{ secure_asset('assets/frontend/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ secure_asset('assets/frontend/js/waypoints.min.js') }}"></script>
-    <script src="{{ secure_asset('assets/frontend/js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ secure_asset('assets/frontend/js/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ secure_asset('assets/frontend/js/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ secure_asset('assets/frontend/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ secure_asset('assets/frontend/js/main.js') }}"></script>
+    <script data-cfasync="false" src="{{ asset('/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/common/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('assets/common/js/jquery-migrate-3.3.2.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/jquery.magnific-popup.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/frontend/js/main.js') }}"></script>
     <script>
         (function ($) {
             "use strict";
