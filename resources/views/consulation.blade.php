@@ -10,7 +10,7 @@
                         <h2 class="page-title"> Free Consulation
                         </h2>
                         <ul class="page-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href="#"> Free Consulation
                             </a></li>
                         </ul>

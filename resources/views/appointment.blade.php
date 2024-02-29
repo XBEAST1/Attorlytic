@@ -9,7 +9,7 @@
                     <h2 class="page-title"> Appointment
                     </h2>
                     <ul class="page-list">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="#"> Appointment
                             </a></li>
                     </ul>

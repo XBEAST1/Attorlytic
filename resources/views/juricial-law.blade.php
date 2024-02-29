@@ -10,7 +10,7 @@
                     <h2 class="page-title"> Juricial Law
                     </h2>
                     <ul class="page-list">
-                        <li><a href="">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><a href="#"> Juricial Law
                             </a></li>
                     </ul>
