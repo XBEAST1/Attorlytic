@@ -250,11 +250,11 @@ select:focus {
   }
 
   .wrapper {
-    width: 80vw;
+    width: 30vw;
   }
 
   .xwrapper {
-    width: 80vw;
+    width: 30vw;
   }
 
   .horizontal-container {
@@ -264,5 +264,15 @@ select:focus {
   .item {
     margin-right: 0;
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 80vw;
+  }
+
+  .xwrapper {
+    width: 80vw;
   }
 }

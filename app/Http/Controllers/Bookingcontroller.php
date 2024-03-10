@@ -38,13 +38,22 @@ class Bookingcontroller extends Controller
         $time_validator = Validator::make($request->all(), [
             'selected_time' => 'required',
         ]);
-
+        
         if ($day_validator->fails()) {
             return redirect()->back()->with('status', 'dayerror')->with('message', 'Please Select a Day');
         }
 
         if ($time_validator->fails()) {
             return redirect()->back()->with('status', 'timeerror')->with('message', 'Please Select a Time');
+        }
+
+        $existingAppointment = Booking::where('lawyer_id', $lawyerId)
+        ->where('day', $selectedDay)
+        ->where('time', $selectedTime)
+        ->first();
+
+        if ($existingAppointment) {
+            return redirect()->back()->with('status', 'existingerror')->with('message', 'The selected time and day is already booked. Please choose another.');
         }
 
         Booking::create([

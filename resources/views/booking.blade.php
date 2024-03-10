@@ -175,6 +175,11 @@
         <strong>Error!</strong> Please Select a Time.
     </div>
     @endif
+    @if(session('status') && session('message') && session('status') === 'existingerror')
+    <div class="alert alert-danger alert-dismissible fade show">
+        <strong>Error!</strong> The selected time and day is already booked. Please choose another.
+    </div>
+    @endif
     <section class="blog-details-content-area padding-top-100 padding-bottom-100">
         <div class="container">
             <div class="row">
